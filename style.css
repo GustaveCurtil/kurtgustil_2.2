@@ -1,0 +1,95 @@
+*, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
+    /* font-family:Georgia, 'Times New Roman', Times, serif; */
+       /* font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+}
+
+body {
+    width: 100vw;
+    height: 100svh;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background-image: url(achtergrond_gameboy.png);
+    background-size: cover;
+    background-position: 50%;
+}
+
+header {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header h1 {
+    text-align: center;
+    font-weight: normal;
+}
+header h1 mark {
+    color: #F24726;
+    background-color: #CEE741;
+}
+header h1 mark span {
+    font-weight: 600;
+}
+
+header p {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+header p mark {
+    color: #FEF445;
+    background-color: #0CA789;
+}
+
+aside p {
+    text-align: center;
+    font-size: 1.2em;
+}
+aside p:last-child {
+    font-size: 1.4em;
+    font-family:monospace;
+}
+aside p:last-child {
+    font-weight: bold;
+}
+aside p mark:first-child {
+    color: #DA0063;
+    background-color: #FEF445;
+}
+aside p mark:last-child {
+    color: #F24726;
+    background-color: #FEF445;
+}
+
+section {
+    width: 90%;
+    background-color: #f5f3bf9a;
+
+}
+
+section p {
+    width: 95%;
+    
+    margin: 0.3em auto;
+}
+
+button {
+    margin: 0 auto;
+    width: max-content;
+    background-color: #DA0063;
+    color: white;
+    text-decoration: underline;
+    font-size: 1.1em;
+}
