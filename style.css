@@ -85,11 +85,17 @@ section p {
     margin: 0.3em auto;
 }
 
-button {
+a {
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0 auto;
-    width: max-content;
+    border: 1px solid white;
     background-color: #DA0063;
     color: white;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+a span {
     text-decoration: underline;
-    font-size: 1.1em;
+    text-decoration-thickness: 1px;
 }
