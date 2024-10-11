@@ -22,7 +22,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
 
-    background: url(achtergrond_gameboy.png) center center no-repeat;
+    background: url(achtergrond_gameboy.png) center center no-repeat fixed;
     background-size: cover;
 }
 
