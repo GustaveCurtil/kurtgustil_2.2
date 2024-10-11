@@ -7,16 +7,24 @@ In eerste instantie wil ik vooral zorgen dat ik een 'online visitekaartje' heb. 
 
 ## Bedenkingen enzo
 
+VOORLOPIG ENKEL FOCUSSEN OP MOBILE met de hoop dat er vanzelf een ontwerp zal uitmonden voor desktop.
+
 - In termen van 'Responsive Design', is er een algemene overeenstemming over dat men het ontwerpprocess begint voor het kleinste scherm, de gsm: 'Mobile First'.
 - Ontwerpen in Figma is zeer handig, maar ontwerpen tijdens het coderen heeft ook iets interessants...
 
 
 ## To Do's
-1) tabladenprincipe toepassen (want die zit toch best wel goed vind ik)
+- tabladenprincipe toepassen (want die zit toch best wel goed vind ik)
+- structuur in mappen brengen (experiment en website scheiden van elkaar)
+- ontwerpen van websites/portfolio
+    - webbrowser met afbeelding (scrollable/unscrollable)
+    - website-naam URL
+    - beschrijving organisatie
+    - beschrijving website/technologie
 
 
 ## Planning
-1) overschakelen naar Laravel? 
+- overschakelen naar Laravel? 
 JA: CRUD systeem, teller, eventueel authentificatie voor bezoekers?->nee
 NEE: als het enkel voor teller is, kan ik het beter met pure PHP proberen eens (goede oefening)
 => later bepalen, nu focussen op 
