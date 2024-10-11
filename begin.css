@@ -2,15 +2,17 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background: url(achtergrond_gameboy.png) center center no-repeat;
-    background-size: cover;
 }
 
 html {
     font-size: 20px;
+    height: 100%;
+    overflow: hidden;
     /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
     /* font-family:Georgia, 'Times New Roman', Times, serif; */
        /* font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    background: url(achtergrond_gameboy.png) center center no-repeat;
+    background-size: cover;
 }
 
 @media screen and (min-width: 600px) {
