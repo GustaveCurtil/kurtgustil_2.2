@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     background: url(achtergrond_gameboy.png) center center no-repeat;
+    background-size: cover;
 }
 
 html {
@@ -26,9 +27,6 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-
-    background: url(achtergrond_gameboy.png) center center no-repeat;
-    background-size: cover;
 }
 
 header {
