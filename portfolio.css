@@ -23,9 +23,23 @@ section#website article.actief {
 .uitleg {
     height: 100%;
     display: flex;
+    overflow-y: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.uitleg a {
+    color: var(--dark-pink);
+}
+
+.uitleg a h3 {
+    font-size: 1.4em;
+}
+
+.uitleg p {
+    width: 90%;
+
 }
 
 /* BROWSER */
