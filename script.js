@@ -1,3 +1,10 @@
+let header = document.querySelector("header");
+
+header.addEventListener('click', (e) => {
+    window.location = 'index.html';
+})
+
+
 let kopierKnop = document.querySelectorAll(".kopieer button");
 
 kopierKnop.forEach(button => {
