@@ -78,7 +78,7 @@ nav a {
     justify-content: center;
     align-items: center;
 
-    font-weight: 600;
+    font-weight: 300;
     color: var(--dark-pink);
 
     text-decoration: none;
@@ -91,7 +91,7 @@ nav a {
 
 nav a:first-of-type {border-left: 0;}
 nav a:last-of-type {border-right: 0;}
-nav a.actief {background-color: var(--background-white);}
+nav a.actief {background-color: var(--background-white); font-weight: 600;}
 
 
 main {
