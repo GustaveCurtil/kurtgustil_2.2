@@ -14,14 +14,14 @@ VOORLOPIG ENKEL FOCUSSEN OP MOBILE met de hoop dat er vanzelf een ontwerp zal ui
 
 
 ## To Do's
-- tabladenprincipe toepassen (want die zit toch best wel goed vind ik)
+- tabladenprincipe toepassen (want die zit toch best wel goed vind ik) ✔️
 - structuur in mappen brengen (experiment en website scheiden van elkaar)
-- ontwerpen van websites/portfolio
+- ontwerpen van websites/portfolio (via Figma best -> 't is papier geworden) ✔️
     - webbrowser met afbeelding (scrollable/unscrollable)
     - website-naam URL
     - beschrijving organisatie
     - beschrijving website/technologie
-
+- coderen websites/portfolio
 
 ## Planning
 - overschakelen naar Laravel? 
