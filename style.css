@@ -11,6 +11,12 @@ html {
        /* font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
 }
 
+@media screen and (min-width: 600px) {
+    html {
+        font-size: 26px;
+    } 
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -24,6 +30,11 @@ body {
 
     background: url(achtergrond_gameboy.png) center center no-repeat fixed;
     background-size: cover;
+    
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
 }
 
 header {
@@ -76,6 +87,7 @@ aside p:last-child mark{
 
 section {
     width: 90%;
+    max-width: 450px;
     background-color: #f5f3bf9a;
 
 }
