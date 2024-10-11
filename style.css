@@ -3,7 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     overscroll-behavior: none;
-
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 :root {
@@ -48,7 +48,7 @@ header h1 {
     font-size: 1.4em;
     line-height: var(--height-titel);
 
-    font-weight: 500;
+    font-weight: 300;
 
     width: max-content;
     
@@ -62,7 +62,7 @@ header h1 {
     position: relative;
     left: 50%;
 }
-header h1 span {font-weight: 900;}
+header h1 span {font-weight: 600;}
 
 nav {
     grid-area: nav;
@@ -78,7 +78,8 @@ nav a {
     justify-content: center;
     align-items: center;
 
-    font-weight: 400;
+    font-weight: 600;
+    color: var(--dark-pink);
 
     text-decoration: none;
 
@@ -90,7 +91,7 @@ nav a {
 
 nav a:first-of-type {border-left: 0;}
 nav a:last-of-type {border-right: 0;}
-nav a:hover {font-weight: 600;}
+nav a.actief {background-color: var(--background-white);}
 
 
 main {

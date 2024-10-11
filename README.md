@@ -22,6 +22,9 @@ VOORLOPIG ENKEL FOCUSSEN OP MOBILE met de hoop dat er vanzelf een ontwerp zal ui
     - beschrijving organisatie
     - beschrijving website/technologie
 - coderen websites/portfolio
+    - maar max 8 websites laten zien? (zodat ik niet hoef te scrollen) Voorlopig ok want heb er toch maar 5
+    - 
+- CSS bestanden eens grondig 'kuisen'
 
 ## Planning
 - overschakelen naar Laravel? 

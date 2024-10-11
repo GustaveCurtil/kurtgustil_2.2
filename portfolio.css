@@ -2,6 +2,10 @@ main {
     background-color: violet;
 }
 
+:root {
+    --aantalWebsites: 5;
+}
+
 /*/ / WEBSITES/ /*/
 
 section#website {
@@ -150,4 +154,39 @@ section#websites div {
     height: 25%;
 }
 
+/*/ / DESKTOP / /*/
+@media screen and (min-width: 600px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "websites website website";
+    }    
 
+    section#websites {
+        grid-area: websites;
+        height: 100%;
+    }
+
+    section#websites div {
+        height: calc(100% / var(--aantalWebsites));
+    }
+
+    section#website {
+        grid-area: website;
+        width: 100%;
+        height: 100%;
+    }
+    section#website.actief {
+        display: grid;
+    }
+    section#website article {
+        flex-direction: row;
+    }
+
+    section#website article div {
+        width: 100%;
+    }
+
+}
