@@ -7,16 +7,9 @@
 html {
     font-size: 20px;
     height: 100%;
-    /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
-    /* font-family:Georgia, 'Times New Roman', Times, serif; */
-       /* font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
 }
 
-@media screen and (min-width: 600px) {
-    html {
-        font-size: 26px;
-    } 
-}
+@media screen and (min-width: 600px) {html {font-size: 26px;} }
 
 body {
     width: 100vw;
@@ -31,7 +24,7 @@ body {
 
     background: url(achtergrond_gameboy.png) center center no-repeat;
     background-size: cover;
-    background-color: #57a017;
+    background-color: #6ebe28c9;
 }
 
 header {
