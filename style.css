@@ -22,9 +22,8 @@ body {
     justify-content: space-evenly;
     align-items: center;
 
-    background-image: url(achtergrond_gameboy.png);
+    background: url(achtergrond_gameboy.png) center center no-repeat;
     background-size: cover;
-    background-position: 50%;
 }
 
 header {
@@ -57,18 +56,20 @@ aside p {
     text-align: center;
     font-size: 1.2em;
 }
+
 aside p:last-child {
     font-size: 1.4em;
     font-family:monospace;
 }
-aside p:last-child {
-    font-weight: bold;
-}
-aside p mark:first-child {
+aside p:first-child mark {
     color: #DA0063;
     background-color: #FEF445;
 }
-aside p mark:last-child {
+
+aside p:last-child {
+    font-weight: bold;
+}
+aside p:last-child mark{
     color: #F24726;
     background-color: #FEF445;
 }
