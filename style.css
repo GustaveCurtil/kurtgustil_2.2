@@ -108,10 +108,9 @@ main {
     overflow-y: auto;
 }
 
-.pagewrapper #websites{
+.pagewrapper{
     min-height: calc(100% - 5vw);
     width: 95%;
 
     margin: 2.5vw auto;
-    margin-bottom: calc(2.5vw + var(--height-nav));
 }

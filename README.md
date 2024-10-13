@@ -22,12 +22,18 @@ VOORLOPIG ENKEL FOCUSSEN OP MOBILE met de hoop dat er vanzelf een ontwerp zal ui
     - beschrijving organisatie
     - beschrijving website/technologie
 - coderen websites/portfolio
-    - maar max 8 websites laten zien? (zodat ik niet hoef te scrollen) Voorlopig ok want heb er toch maar 5
-    - 
+    - websites toevoegen manueel
+    - beschrijving per website toevoegen
+    - link naar website ook!
 - CSS bestanden eens grondig 'kuisen'
+- 
 
 ## Planning
 - overschakelen naar Laravel? 
 JA: CRUD systeem, teller, eventueel authentificatie voor bezoekers?->nee
 NEE: als het enkel voor teller is, kan ik het beter met pure PHP proberen eens (goede oefening)
 => later bepalen, nu focussen op 
+- PVA: 
+    - eerste alles Front-End voor 'WEBSITES' en 'HUUR MIJ'
+    - Visitor Counter kan ook nog Front End!
+    - Daarna alles Front-End voor 'SPELEN'

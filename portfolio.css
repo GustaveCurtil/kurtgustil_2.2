@@ -3,6 +3,9 @@
 }
 
 /*/ / WEBSITES/ /*/
+#websites {
+    padding-bottom: var(--height-nav)
+}
 
 section#website {
     height: calc(100% - var(--height-nav));
@@ -20,27 +23,20 @@ section#website article.actief {
 }
 
 /* UITLEG */
-.uitleg {
-    height: 100%;
-    display: flex;
-    overflow-y: auto;
-    flex-direction: column;
-    align-items: center;
-    padding: 2.5vw;
+
+.uitleg p {
+    width: 100%;
 }
 
-.uitleg a {
-    color: var(--dark-pink);
-}
-
-.uitleg a h3 {
-    font-size: 1.2em;
+.uitleg p:not(:last-of-type) {
+    margin-bottom: 2.5vw;
 }
 
 /* BROWSER */
 .browser {
     width: 100%;
     height: fit-content;
+    margin-bottom: 2.5vw;
 }
 
 .window {
