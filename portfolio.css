@@ -41,7 +41,7 @@ section#website article.actief {
 
 .window {
     width: 100%;
-    aspect-ratio: 1.79/1;
+    aspect-ratio: 2/1;
     background-color: rgb(88, 141, 141);
 
     line-height: 0;
@@ -62,39 +62,42 @@ img {
     /* background-color: var(--light-pink); */
 }
 
-#wijslijf .window::-webkit-scrollbar-track
+.window::-webkit-scrollbar-track
 {
 	border-radius: 8px;
 	background-color: #F5F5F5;
 }
 
-#wijslijf .window::-webkit-scrollbar
+.window::-webkit-scrollbar
 {
 	width: 10px;
 	background-color: hsl(61, 53%, 83%);
 }
 
-#wijslijf .window::-webkit-scrollbar-thumb
+.window::-webkit-scrollbar-thumb
 {
 	border-radius: 8px;
 	background-color: #a2914e;
 }
 
-#wijslijf .bar {
+.bar {
     background-color: hsl(61, 53%, 83%); 
+    border: 0.5px solid hsl(48, 35%, 47%);
+    border-bottom: 0;
 }
 
-#wijslijf .inputfield {
+.inputfield {
     border: 0.5px solid hsl(48, 35%, 47%);
 }
 
-#wijslijf .window {
+.window {
     border-top: 0.5px solid #a2914e;
     overflow-y:scroll;
+    border: 0.5px solid hsl(48, 35%, 47%);
 }
 
-#wijslijf {
-    border: 0.5px solid hsl(48, 35%, 47%);
+.noscroll .window {
+    overflow-y: hidden;
 }
 
 .arrows {
