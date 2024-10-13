@@ -6,11 +6,41 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+    animation: glow 10s infinite;
+}
+
+@keyframes glow {
+    0% {
+        background-color: violet;
+    }
+    25% {
+        background-color: pink;
+    }
+    50% {
+        background-color: lightblue;
+    }
+    75% {
+        background-color: lightgreen;
+    }
+    100% {
+        background-color: violet;
+    }
+}
 .klein {
     font-size: 0.6em;
 }
 main {
-    background-color: yellow;
+    background-image: URL(experiment/textuur_water.jpg);
+    background-size: auto;
+}
+
+.bold {
+    font-weight: normal;
+}
+
+nav a.actief {
+    font-weight: normal;
 }
 
 main p {

@@ -60,7 +60,6 @@ header h1 {
     align-items: center;
 
     text-align: center;
-    background-color: var(--light-pink); 
 
     transform: translateX(-50%);
     position: relative;
@@ -88,7 +87,6 @@ nav a {
 
     text-decoration: none;
 
-    background-color: var(--light-pink);
     border-top: 2px solid var(--dark-pink);
     border-right: 1px solid var(--dark-pink);
     border-left: 1px solid var(--dark-pink);
