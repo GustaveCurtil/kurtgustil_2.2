@@ -45,6 +45,7 @@ function updateWebite(volgordenummer){
     websites.forEach(website => {
         website.classList.remove('actief');
     })
+    website.scrollTop = 0;
     website.classList.add('actief');
     selectie.classList.add('actief');
 
@@ -63,11 +64,15 @@ pagina.addEventListener('touchend', (e) => {
 
 function handleGesure() {
     let swiped = 'swiped: ';
-    if (touchendX < touchstartX) {
-        vorige();
+    if ((-100 > touchendX - touchstartX) || 100 < (touchendX - touchstartX)) {
+        if (touchendX < touchstartX) {
+            vorige();
+        }
+        if (touchendX > touchstartX) {
+            volgende();
+        }
     }
-    if (touchendX > touchstartX) {
-        volgende();
-    }
+    console.log(touchendX)
+    console.log(touchstartX)
 }
 
