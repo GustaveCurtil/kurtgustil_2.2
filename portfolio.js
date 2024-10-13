@@ -45,7 +45,7 @@ function updateWebite(volgordenummer){
     websites.forEach(website => {
         website.classList.remove('actief');
     })
-    website.scrollTop(0);
+    website.scrollTop = 0;
     website.classList.add('actief');
     selectie.classList.add('actief');
 

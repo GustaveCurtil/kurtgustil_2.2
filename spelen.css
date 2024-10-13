@@ -1,3 +1,14 @@
+* {
+    font-family:cursive;
+}
+
+.klein {
+    font-size: 0.4em;
+}
 main {
     background-color: yellow;
+}
+
+main p {
+    margin: auto;
 }
