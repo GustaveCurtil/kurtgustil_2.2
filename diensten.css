@@ -1,0 +1,8 @@
+.cursief {
+    color: var(--matching-color);
+}
+
+li {
+    list-style-position: outside;
+    margin-left: 5%;
+}

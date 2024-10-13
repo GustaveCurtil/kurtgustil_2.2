@@ -2,7 +2,7 @@ let websites = document.querySelectorAll('#website article');
 let selecties = document.querySelectorAll("#selectie div");
 let links = document.querySelector("#selectie svg:first-child");
 let rechts = document.querySelector("#selectie svg:last-child");
-let pagina = document.querySelector("#websites");
+let pagina = document.querySelector("main");
 
 let volgordenummer = 0;
 let touchstartX = 0;
