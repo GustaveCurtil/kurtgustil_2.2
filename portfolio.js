@@ -10,11 +10,11 @@ let touchendX = 0;
 
 
 links.addEventListener('click', (e) => {
-    vorige();
+    volgende()
 })
 
 rechts.addEventListener('click', (e) => {
-    volgende()
+    vorige();
 })
 
 function vorige() {
