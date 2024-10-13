@@ -5,7 +5,7 @@
 /*/ / WEBSITES/ /*/
 
 section#website {
-    height: 80%;
+    height: calc(100% - var(--height-nav));
 }
 
 section#website article {
@@ -145,23 +145,33 @@ img {
 
 /*/ / OVERZICHT / /*/
 
-section#websites {
-    height: 20%;
-    overflow-y: auto;
-}
-
-section#websites div.actief {
-    background-color: #52C68C;
-    color: var(--background-white);
-    text-decoration: none;
-}
-
-section#websites div {
-    height: 25%;
+section#selectie {
+    height: var(--height-nav);
+    position: absolute;
+    width: 100%;
+    bottom: calc(var(--height-nav));
+    border-top: 2px solid var(--dark-pink);
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: underline solid;
+    background-color: var(--background-white);
+}
+
+
+section#selectie div {
+    display: none;
+}
+
+section#selectie div.actief {
+    width: calc(100% /3);
+
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+svg {
+    width: calc(100% /3);
 }
 
 
