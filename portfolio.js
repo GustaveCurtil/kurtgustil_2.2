@@ -2,8 +2,11 @@ let websites = document.querySelectorAll('#website article');
 let selecties = document.querySelectorAll("#selectie div");
 let links = document.querySelector("#selectie svg:first-child");
 let rechts = document.querySelector("#selectie svg:last-child");
-let volgordenummer = 0;
 let pagina = document.querySelector("#websites");
+
+let volgordenummer = 0;
+let touchstartX = 0;
+let touchendX = 0;
 
 
 links.addEventListener('click', (e) => {
@@ -47,38 +50,24 @@ function updateWebite(volgordenummer){
 
 }
 
-let touchstartX = 0;
-let touchstartY = 0;
-let touchendX = 0;
-let touchendY = 0;
-
+// Listen for the 'touchstart' event
 pagina.addEventListener('touchstart', (e) => {
-    touchstartX = e.screenX;
-    touchstartY = e.screenY;
+    touchstartX = e.changedTouches[0].clientX; // Use clientX from the first touch
 }, false);
 
+// Listen for the 'touchend' event
 pagina.addEventListener('touchend', (e) => {
-    touchendX = e.screenX;
-    touchendY = e.screenY;
+    touchendX = e.changedTouches[0].clientX; // Use clientX from the first touch
     handleGesure();
-}, false); 
+}, false);
 
 function handleGesure() {
-    var swiped = 'swiped: ';
+    let swiped = 'swiped: ';
     if (touchendX < touchstartX) {
-        alert(swiped + 'left!');
+        vorige();
     }
     if (touchendX > touchstartX) {
-        alert(swiped + 'right!');
-    }
-    if (touchendY < touchstartY) {
-        alert(swiped + 'down!');
-    }
-    if (touchendY > touchstartY) {
-        alert(swiped + 'left!');
-    }
-    if (touchendY == touchstartY) {
-        alert('tap!');
+        volgende();
     }
 }
 
