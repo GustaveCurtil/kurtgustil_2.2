@@ -45,30 +45,28 @@ function updateWebite(volgordenummer){
     websites.forEach(website => {
         website.classList.remove('actief');
     })
-    pagina.scrollTop = 0;
     website.classList.add('actief');
     selectie.classList.add('actief');
 
 }
 
-// Listen for the 'touchstart' event
 pagina.addEventListener('touchstart', (e) => {
-    touchstartX = e.changedTouches[0].clientX; // Use clientX from the first touch
+    touchstartX = e.changedTouches[0].clientX;
 }, false);
 
-// Listen for the 'touchend' event
 pagina.addEventListener('touchend', (e) => {
-    touchendX = e.changedTouches[0].clientX; // Use clientX from the first touch
+    touchendX = e.changedTouches[0].clientX;
     handleGesure();
 }, false);
 
 function handleGesure() {
-    let swiped = 'swiped: ';
     if ((-100 > touchendX - touchstartX) || 100 < (touchendX - touchstartX)) {
         if (touchendX < touchstartX) {
+            pagina.scrollTop = 0;
             vorige();
         }
         if (touchendX > touchstartX) {
+            pagina.scrollTop = 0;
             volgende();
         }
     }
