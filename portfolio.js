@@ -10,11 +10,11 @@ let touchendX = 0;
 
 
 links.addEventListener('click', (e) => {
-    volgende()
+    vorige();
 })
 
 rechts.addEventListener('click', (e) => {
-    vorige();
+    volgende()
 })
 
 function vorige() {
@@ -63,11 +63,11 @@ function handleGesure() {
     if ((-100 > touchendX - touchstartX) || 100 < (touchendX - touchstartX)) {
         if (touchendX < touchstartX) {
             pagina.scrollTop = 0;
-            vorige();
+            volgende();
         }
         if (touchendX > touchstartX) {
             pagina.scrollTop = 0;
-            volgende();
+            vorige();
         }
     }
     console.log(touchendX)
