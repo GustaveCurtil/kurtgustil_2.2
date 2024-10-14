@@ -4,7 +4,10 @@
 
 /*/ / WEBSITES/ /*/
 #websites {
-    padding-bottom: var(--height-nav)
+    padding-bottom: var(--height-nav);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 section#website {
