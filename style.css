@@ -15,8 +15,8 @@ html {
     --background-white: #fcfcfc;
     --black: rgb(35, 35, 35);
     --matching-color: rgb(107, 113, 158);
-    --height-titel: 35px;
-    --height-nav: 35px;
+    --height-titel: 40px;
+    --height-nav: 40px;
 }
 
 body {
