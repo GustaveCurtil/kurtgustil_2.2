@@ -148,7 +148,7 @@ img {
 /*/ / OVERZICHT / /*/
 
 section#selectie {
-    height: calc(var(--height-nav) * 1.5);
+    height: calc(var(--height-nav) * 1);
     position: absolute;
     width: 100%;
     bottom: calc(var(--height-nav));
