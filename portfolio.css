@@ -148,7 +148,7 @@ img {
 /*/ / OVERZICHT / /*/
 
 section#selectie {
-    height: calc(var(--height-nav) * 2);
+    height: calc(var(--height-nav) * 1.5);
     position: absolute;
     width: 100%;
     bottom: calc(var(--height-nav));
@@ -174,7 +174,7 @@ section#selectie div.actief {
 
 section#selectie div a {
     font-size: 1.2em;
-    color: var(--black);
+    color: rgb(29, 36, 86);
 }
 
 
