@@ -148,7 +148,7 @@ img {
 /*/ / OVERZICHT / /*/
 
 section#selectie {
-    height: var(--height-nav);
+    height: calc(var(--height-nav) * 2);
     position: absolute;
     width: 100%;
     bottom: calc(var(--height-nav));
@@ -171,6 +171,12 @@ section#selectie div.actief {
     justify-content: center;
     text-decoration: none;
 }
+
+section#selectie div a {
+    font-size: 1.2em;
+    color: var(--black);
+}
+
 
 svg {
     width: calc(100% /3);
