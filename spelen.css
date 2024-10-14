@@ -7,7 +7,7 @@ html {
 }
 
 body {
-    animation: glow 6s infinite;
+    animation: glow 45s infinite;
 }
 
 @keyframes glow {
