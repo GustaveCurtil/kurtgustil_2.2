@@ -14,14 +14,8 @@ body {
     0% {
         background-color: var(--light-pink);
     }
-    25% {
-        background-color: #b2d986;
-    }
     50% {
-        background-color: #74c0ca;
-    }
-    75% {
-        background-color: #af90c2;
+        background-color: #d9b086;
     }
     100% {
         background-color: var(--light-pink);
