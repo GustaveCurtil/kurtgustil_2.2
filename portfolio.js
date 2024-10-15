@@ -23,6 +23,7 @@ function vorige() {
     } else {
         volgordenummer = websites.length - 1;
     }
+    kleurtje(links);
     updateWebite(volgordenummer);
 }
 
@@ -32,21 +33,33 @@ function volgende() {
     } else {
         volgordenummer = 0;
     }
+    kleurtje(rechts);
     updateWebite(volgordenummer);
+
+}
+
+
+function kleurtje(richting) {
+    richting.style.transition = "none";
+    richting.style.backgroundColor = "black";
+    setTimeout(function() {
+        richting.style.transition = "background-color 1s ease";
+        richting.style.backgroundColor = "";  // Reset to original color
+    }, 0);
 }
 
 function updateWebite(volgordenummer){
     let website = websites[volgordenummer];
     let selectie = selecties[volgordenummer];
 
-    selecties.forEach(selectie => {
-        selectie.classList.remove('actief');
-    })
+    // selecties.forEach(selectie => {
+    //     selectie.classList.remove('actief');
+    // })
     websites.forEach(website => {
         website.classList.remove('actief');
     })
     website.classList.add('actief');
-    selectie.classList.add('actief');
+    // selectie.classList.add('actief');
 
 }
 
@@ -63,19 +76,13 @@ function handleGesure() {
     if ((-100 > touchendX - touchstartX) || 100 < (touchendX - touchstartX)) {
         if (touchendX < touchstartX) {
             pagina.scrollTop = 0;
-            kleurRechts();
+            volgende();
         }
         if (touchendX > touchstartX) {
             pagina.scrollTop = 0;
             vorige();
         }
     }
-    console.log(touchendX)
-    console.log(touchstartX)
 }
 
 
-
-function kleurRechts() {
-    rechts.style.backgroundColor = "black";
-}

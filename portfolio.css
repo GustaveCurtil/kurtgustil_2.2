@@ -183,6 +183,10 @@ section#selectie div a {
     /* width: calc(100% /3); */
 }
 
+#selectie svg {
+    transition: background-color 1s ease; /* 1 second fade-out effect */
+  }
+
 
 
 
