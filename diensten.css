@@ -51,8 +51,8 @@ button {
     flex-direction: column;
 }
 
-.contact > *:not((:last-of-type)){
-    padding-bottom: 2.5vw;
+.contact > *:not(a){
+    margin-bottom: 5px;
 }
 
 .klein {

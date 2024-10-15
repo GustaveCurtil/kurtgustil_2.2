@@ -63,7 +63,7 @@ function handleGesure() {
     if ((-100 > touchendX - touchstartX) || 100 < (touchendX - touchstartX)) {
         if (touchendX < touchstartX) {
             pagina.scrollTop = 0;
-            volgende();
+            kleurRechts();
         }
         if (touchendX > touchstartX) {
             pagina.scrollTop = 0;
@@ -74,3 +74,8 @@ function handleGesure() {
     console.log(touchstartX)
 }
 
+
+
+function kleurRechts() {
+    rechts.style.backgroundColor = "black";
+}

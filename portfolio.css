@@ -178,9 +178,11 @@ section#selectie div a {
 }
 
 
-svg {
-    width: calc(100% /3);
+#selectie svg:first-child {
+    border-right: 2px solid var(--dark-pink);
+    /* width: calc(100% /3); */
 }
+
 
 
 
