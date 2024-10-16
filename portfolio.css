@@ -28,14 +28,12 @@ section#website article.actief {
 /* UITLEG */
 .uitleg h3 {
     text-align: center;
-    font-size: 1.4em;
-    font-weight: 400;
+    font-size: 1.1em;
+    font-weight: 600;
 }
 
 .uitleg h3 a {
-    color: var(--black);
-
-    text-decoration-thickness: 1px;
+    color: var(--dark-pink);
 }
 
 .uitleg p {
@@ -203,7 +201,7 @@ section#selectie div a {
 
     font-weight: 600;
 
-    color: var(--black);
+    color: var(--dark-pink);
 
     text-decoration: none;
     height: fit-content;
