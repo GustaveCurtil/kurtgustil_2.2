@@ -74,7 +74,7 @@ pagina.addEventListener('touchend', (e) => {
 }, false);
 
 function handleGesure() {
-    if ((-100 > touchendX - touchstartX) || 100 < (touchendX - touchstartX)) {
+    if ((-30 > touchendX - touchstartX) || 30 < (touchendX - touchstartX)) {
         if (touchendX < touchstartX) {
             pagina.scrollTop = 0;
             volgende();

@@ -26,16 +26,15 @@ section#website article.actief {
 }
 
 /* UITLEG */
-.uitleg h3 {
+h3 {
     text-align: center;
     font-size: 1.1em;
     font-weight: 600;
+    margin-bottom: 2.5vw;
 }
 
-.uitleg h3 a {
+h3 a {
     color: var(--dark-pink);
-    text-decoration: wavy underline;
-    text-underline-offset: 4px;
 }
 
 .uitleg p {
