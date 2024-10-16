@@ -26,6 +26,17 @@ section#website article.actief {
 }
 
 /* UITLEG */
+.uitleg h3 {
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: 400;
+}
+
+.uitleg h3 a {
+    color: var(--black);
+
+    text-decoration-thickness: 1px;
+}
 
 .uitleg p {
     width: 100%;
@@ -33,6 +44,11 @@ section#website article.actief {
 
 .uitleg p:not(:last-of-type) {
     margin-bottom: 2.5vw;
+}
+
+details summary {
+    text-align: center;
+    margin-bottom: 2vw;
 }
 
 /* BROWSER */
@@ -149,44 +165,55 @@ img {
 
 section#selectie {
     height: calc(var(--height-nav) * 1);
-    position: absolute;
     width: 100%;
+
+    position: absolute;
     bottom: calc(var(--height-nav));
+
     border-top: 2px solid var(--dark-pink);
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     background-color: var(--background-white);
 }
 
 
 section#selectie div {
     display: none;
+    height: 100%;
+    width: calc(100% / 3);
 }
 
 section#selectie div.actief {
     width: calc(100% /3);
 
+    box-sizing: content-box;
+
     display: flex;
     justify-content: center;
+    align-items: center;
     text-decoration: none;
 }
 
 section#selectie div a {
-    font-size: 1.2em;
-    color: rgb(29, 36, 86);
-}
+    font-size: 1.8em;
+    line-height: 1.8em;
 
+    font-weight: 600;
 
-#selectie svg:first-child {
-    border-right: 2px solid var(--dark-pink);
-    /* width: calc(100% /3); */
+    color: var(--black);
+
+    text-decoration: none;
+    height: fit-content;
+
 }
 
 #selectie svg {
-    transition: background-color 1s ease; /* 1 second fade-out effect */
+    width: calc(100% / 3);
+    transition: background-color 1.5s ease; /* 1 second fade-out effect */
   }
-
 
 
 

@@ -44,7 +44,7 @@ function kleurtje(richting) {
     richting.style.transition = "none";
     richting.style.backgroundColor = "hsl(" + hue + ", 21%, 52%)";
     setTimeout(function() {
-        richting.style.transition = "background-color 0.5s ease";
+        richting.style.transition = "background-color 1s ease";
         richting.style.backgroundColor = "";  // Reset to original color
     }, 0);
 }
