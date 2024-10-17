@@ -25,11 +25,11 @@ header h1 { text-align: center; font-weight: normal;}
 header h1 mark { color: #F24726; background-color: #CEE741;}
 header h1 mark span { font-weight: 600;}
 
-header p { text-align: center; font-size: 1.1em; font-weight: 700;}
+header p { text-align: center; font-size: 1.1em; font-weight: 700;} 
 header p mark { color: #FEF445; background-color: #0CA789;}
 
 aside p { text-align: center; font-size: 1.1em; font-weight: 100; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif}
-aside p:first-child mark { color: #ffffff; background-color: #15372700;}
+aside p:first-child mark { color: #070707; background-color: #15372700;}
 aside p:last-child { font-size: 1.4em; font-weight: 900; font-family:monospace;}
 aside p:last-child mark { color: #F24726; background-color: #FEF445;}
 img {
