@@ -11,7 +11,7 @@ body {
 
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 
     background: url(achtergrond_gameboy.png) center center no-repeat;
@@ -28,10 +28,14 @@ header h1 mark span { font-weight: 600;}
 header p { text-align: center; font-size: 1.1em; font-weight: 700;}
 header p mark { color: #FEF445; background-color: #0CA789;}
 
-aside p { text-align: center; font-size: 1.2em;}
-aside p:first-child mark { color: #DA0063; background-color: #FEF445;}
+aside p { text-align: center; font-size: 1.1em; font-weight: 100; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif}
+aside p:first-child mark { color: #ffffff; background-color: #15372700;}
 aside p:last-child { font-size: 1.4em; font-weight: 900; font-family:monospace;}
 aside p:last-child mark { color: #F24726; background-color: #FEF445;}
+img {
+    width: 100%;
+    height: 100%;
+}
 
 section { width: 90%; max-width: 450px; background-color: #f5f3bfc4;}
 section p { width: 95%; margin: 0.3em auto;}
