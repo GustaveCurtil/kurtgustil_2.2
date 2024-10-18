@@ -2,13 +2,19 @@ html {
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+:root {
+    --dark-pink: #3e3020;
+    --light-pink: #ad8b6f;
+    --background-white: #dadada;
+}
+
 .soaai {
     font-family: Arial, Helvetica, sans-serif;
 }
-
+/* 
 body {
     animation: glow 45s infinite;
-}
+} */
 
 @keyframes glow {
     0% {
@@ -25,10 +31,15 @@ body {
     font-size: 0.7em;
 }
 main {
-    background-image: URL(experiment/Twinkling_Stars.gif);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: URL(experiment/achtergrond_speeltuin.png);
     background-repeat: repeat;
     background-size: contain;
 }
+
 
 .bold {
     font-weight: normal;
@@ -47,3 +58,8 @@ main p {
     top: 50%;
     left: 50%;
 }
+
+   img {
+    width: 69%;
+    max-width: 400px;
+   } 
