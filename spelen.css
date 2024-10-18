@@ -25,8 +25,9 @@ body {
     font-size: 0.7em;
 }
 main {
-    background-image: URL(experiment/textuur_water.jpg);
-    background-size: auto;
+    background-image: URL(experiment/Twinkling_Stars.gif);
+    background-repeat: repeat;
+    background-size: contain;
 }
 
 .bold {
@@ -39,4 +40,10 @@ nav a.actief {
 
 main p {
     margin: auto;
+}
+
+#bloem {
+    position: absolute;
+    top: 50%;
+    left: 50%;
 }

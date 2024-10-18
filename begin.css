@@ -29,7 +29,7 @@ body {
 
     background: url(achtergrond_gameboy_thema.png) center center no-repeat;
     background-size: cover;
-    background-color:  #f5f3bf;;
+    background-color: #ffdbdb;
 }
 
 mark, a {
@@ -103,10 +103,3 @@ a {
         text-shadow: 0 0 20px #fff, 0 0 30px rgb(85, 122, 255), 0 0 40px rgb(85, 122, 255), 0 0 50px rgb(85, 122, 255), 0 0 60px rgb(85, 122, 255), 0 0 70px rgb(85, 122, 255), 0 0 80px rgb(85, 122, 255);
     }
   }
-
-#bloem {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-}
