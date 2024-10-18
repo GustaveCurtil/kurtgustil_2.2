@@ -84,7 +84,7 @@ a {
 
     margin: 0 auto;
 
-    border: 3px solid rgb(215, 215, 255);
+    /* border: 3px solid rgb(215, 215, 255); */
     padding: 8px 12px;
     border-radius: 10px;
 
