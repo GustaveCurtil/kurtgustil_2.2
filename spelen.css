@@ -5,7 +5,7 @@ html {
 :root {
     --dark-pink: #3e3020;
     --light-pink: #ad8b6f;
-    --background-white: #dadada;
+    --background-white: hsl(228, 7%, 60%);
 }
 
 .soaai {
