@@ -6,10 +6,10 @@ html { font-size: 20px;}
 @media screen and (min-width: 600px) {html {font-size: 26px;} }
 
 :root {
-    --neon: rgb(4, 254, 4) 0px 0px 5px, rgb(4, 254, 4) 0px 0px 10px;
+    --neon: rgb(91, 255, 85) 0px 0px 5px, rgb(91, 255, 85) 0px 0px 10px, rgb(91, 255, 85) 0px 0px 15px;
     --neon-roos: rgb(255, 78, 205) 0px 0px 5px, rgb(254, 4, 183) 0px 0px 10px;
     --neon-blauw: rgb(85, 122, 255) 0px 0px 5px, rgb(85, 122, 255) 0px 0px 10px;
-    --licht: rgb(193, 255, 193);
+    --licht: rgb(248, 248, 255);
     --licht-roos: rgb(255, 246, 254);
     --licht-blauw: rgb(248, 248, 255);
 }
@@ -27,7 +27,7 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    background: url(achtergrond_gameboy.png) center center no-repeat;
+    background: url(achtergrond_gameboy_thema.png) center center no-repeat;
     background-size: cover;
     background-color:  #f5f3bf;;
 }
@@ -38,15 +38,14 @@ mark, a {
 
 header {font-family: Arial, Helvetica, sans-serif;}
 
-header h1 { text-align: center; font-weight: normal;}
+header h1 { text-align: center; font-weight: 100;}
 header h1 mark { color: var(--licht); background-color: #cee74100; text-shadow: var(--neon);}
-header h1 mark span { font-weight: 600;}
 
 header p { text-align: center; font-size: 1.1em; font-weight: 700;} 
 header p mark { color: var(--licht); background-color: #0ca78800; text-shadow: var(--neon);}
 
-aside p { text-align: center; font-size: 1.1em; font-weight: 100; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif}
-aside p:first-child mark { color: rgb(193, 255, 193); background-color: rgba(4, 2, 4, 0); padding: 0 1px; text-shadow: var(--neon);}
+aside p { text-align: center; font-size: 1.2em; font-weight: 100; font-family: "Vibur", cursive;}
+aside p { color: var(--licht-blauw); background-color: rgba(4, 2, 4, 0); padding: 0 1px; text-shadow: var(--neon-blauw);}
 /* aside p:last-child { font-size: 1.4em; font-weight: 900; font-family: monospace;}
 aside p:last-child mark { color: #F24726; background-color: #FEF445;} */
 .flicker-slow{
@@ -91,15 +90,16 @@ a {
     text-shadow: var(--neon-blauw);
     /* -webkit-animation: glow 1s ease-in-out infinite alternate;
     -moz-animation: glow 1s ease-in-out infinite alternate; */
-    animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
   }
   
   @keyframes glow {
     from {
         text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px rgb(85, 122, 255), 0 0 40px rgb(85, 122, 255), 0 0 50px rgb(85, 122, 255), 0 0 60px rgb(85, 122, 255), 0 0 70px rgb(85, 122, 255);
-        box-shadow: 0 0 1px #fff, 0 0 2px #fff;
+        box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px rgb(200, 212, 255), 0 0 4px rgb(200, 212, 255), 0 0 5px rgb(200, 212, 255);
     }
     to {
+      box-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px rgb(200, 212, 255), 0 0 8px rgb(200, 212, 255), 0 0 10px rgb(200, 212, 255);
         text-shadow: 0 0 20px #fff, 0 0 30px rgb(85, 122, 255), 0 0 40px rgb(85, 122, 255), 0 0 50px rgb(85, 122, 255), 0 0 60px rgb(85, 122, 255), 0 0 70px rgb(85, 122, 255), 0 0 80px rgb(85, 122, 255);
     }
   }
