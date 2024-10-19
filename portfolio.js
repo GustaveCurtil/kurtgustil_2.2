@@ -6,6 +6,7 @@ let infoKnop = document.querySelector("#info");
 const root = document.querySelector(':root');
 let beschrijvingen = document.querySelectorAll('article .uitleg');
 let uitleg = false;
+let beelden = document.querySelectorAll('.uitleg img');
 
 
 let volgordenummer = 0;
@@ -93,11 +94,11 @@ document.addEventListener("gesturestart", function (e) {
 });
 
 document.addEventListener('gesturestart', function(e) {
-
-    // If the gesture is outside the zoomable div, prevent it
-    if (!pagina.contains(e.target)) {
-        e.preventDefault(); // Block zooming outside the div
-    }
+    beelden.forEach(beeld => {
+        if (!beeld.contains(e.target)) {
+            e.preventDefault(); // Block zooming outside the div
+        }  
+    });
 });
 
 
