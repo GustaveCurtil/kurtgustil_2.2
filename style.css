@@ -7,15 +7,14 @@
 
 html {
     font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 :root {
-    --dark-pink: #C65252;
-    --light-pink: #ffdbdb;
-    --background-white: #fcfcfc;
+    --dark-pink: rgb(198, 82, 82);
+    --light-pink: rgb(255, 219, 219);
+    --background-white: rgb(252, 252, 252);
     --black: rgb(54, 54, 54);
-    --matching-color: rgb(107, 113, 158);
     --height-titel: 25px;
     --height-nav: 35px;
 }
@@ -50,33 +49,25 @@ header {
 }
 
 header h1 {
-    font-size: 1.4em;
-    line-height: var(--height-titel);
     color: var(--dark-pink);
 
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
-
     font-weight: 100;
-
-    width: max-content;
+    font-size: 1.4em;
+    line-height: var(--height-titel);
     
     display: inline-flex;
     align-items: center;
-
     text-align: center;
 
+    /*IN HET GEVAL IK EEN LANGERE TITEL WIL*/
+    width: max-content;
     transform: translateX(-50%);
     position: relative;
     left: 50%;
-
-    letter-spacing: 0em;
-    /* text-shadow: var(--light-pink) 0.05em 0.05em 0px, #8d8d8d 0.1em 0.1em 0px; */
-
-    /* -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--light-pink); */
 }
-header h1 span {font-weight: 500;}
+
+header h1 span {font-style: italic;}
 
 nav {
     grid-area: nav;
@@ -90,21 +81,23 @@ nav {
 
 nav a {
     width: calc(100% / 3);
+    
     display: flex;
     justify-content: center;
     align-items: center;
 
-    font-weight: 300;
     color: var(--dark-pink);
+    
+    background-color: var(--light-pink);
 
-    text-decoration: none;
+    /* text-decoration: none; */
 
     border-top: 1px solid var(--dark-pink);
     border-right: 1px solid var(--dark-pink);
 }
 
 nav a:last-of-type {border-right: 0;}
-nav a.actief {    background-color: var(--light-pink); font-style: italic;}
+nav a.actief { text-decoration: none; background-color: var(--background-white); font-style: italic;}
 
 
 main {
