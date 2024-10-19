@@ -71,12 +71,18 @@ h3 a {
 .informatie#websites article { justify-content: start;}
 .informatie#websites article .uitleg { display: block;}
 
-.uitleg img {
+.uitleg figure {
     border: 1px solid var(--kleur-browser);
     margin: 2.5vw 0;
-    overflow: auto;
+    overflow: hidden;
     touch-action: pinch-zoom;
+    line-height: 0;
 }
+
+/* figure img {
+    scale: 200%;
+    transform-origin: 0 0;
+} */
 
 
 /*/ / COMMANDO'S / /*/
@@ -134,7 +140,7 @@ section#selectie div.actief {font-weight: 600;}
     border: 0.5px solid var(--kleur-browser);
 }
 
-.noscroll .window { overflow-y: hidden;}
+.noscroll .window { overflow: hidden;}
 
 img { width: 100%; object-fit: cover;}
 

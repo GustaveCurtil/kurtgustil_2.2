@@ -6,8 +6,9 @@ let infoKnop = document.querySelector("#info");
 const root = document.querySelector(':root');
 let beschrijvingen = document.querySelectorAll('article .uitleg');
 let uitleg = false;
-let beelden = document.querySelectorAll('.uitleg img');
-
+let beelden = document.querySelectorAll('.uitleg figure');
+let statischeWebsites = document.querySelectorAll('.noscroll')
+let alleBeelden = Array.from(beelden).concat(Array.from(statischeWebsites));
 
 let volgordenummer = 0;
 
@@ -97,6 +98,44 @@ document.addEventListener('gesturestart', function(e) {
         }
     });
 });
+
+alleBeelden.forEach(beeld => {
+    let touchX
+    let touchY
+    beeld.addEventListener('touchstart', (e) => {
+        let img = beeld.querySelector('img');
+        const rect = beeld.getBoundingClientRect();
+        touchX = e.changedTouches[0].clientX - rect.left;
+        touchY = e.changedTouches[0].clientY - rect.top;
+        console.log(touchX);
+        console.log(touchY);
+        img.style.scale = '200%';
+        img.style.transformOrigin = `${touchX}px ${touchY}px`;
+    })
+
+    beeld.addEventListener('touchend', (e) => {
+        resetScale(beeld);
+    })
+
+    beeld.addEventListener('touchmove', (e) => {
+        let img = beeld.querySelector('img');
+        const rect = beeld.getBoundingClientRect();
+        touchX = e.changedTouches[0].clientX - rect.left;
+        touchY = e.changedTouches[0].clientY - rect.top;
+        if (touchX < beeld.clientWidth && touchX > 0 && touchY < beeld.clientHeight && touchY > 0) {
+            img.style.scale = '200%';
+            img.style.transformOrigin = `${touchX}px ${touchY}px`;
+        } else {
+            resetScale(beeld);
+        }
+    })
+});
+
+function resetScale(beeld) {
+    let img = beeld.querySelector('img');
+    img.style.scale = '100%';
+    img.style.transformOrigin = "center center";
+}
 
 // beelden.forEach(beeld => {
 //     beeld.addEventListener('gesturestart', function(e) {
