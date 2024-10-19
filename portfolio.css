@@ -67,6 +67,13 @@ h3 a {
 .informatie#websites article { justify-content: start;}
 .informatie#websites article .uitleg { display: block;}
 
+.uitleg img {
+    border: 1px solid var(--kleur-browser);
+    margin: 2.5vw 0;
+    overflow: auto;
+    touch-action: pinch-zoom;
+}
+
 
 /*/ / COMMANDO'S / /*/
 

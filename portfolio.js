@@ -88,5 +88,11 @@ function updateWebite(volgordenummer){
     pagina.scrollTop = 0;
 }
 
+document.addEventListener("gesturestart", function (e) {
+    e.preventDefault(); // Prevent gesture zooming
+});
+
+pageXOffset.addEventListener
+
 
 
