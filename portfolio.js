@@ -88,17 +88,14 @@ function updateWebite(volgordenummer){
     pagina.scrollTop = 0;
 }
 
-document.addEventListener("gesturestart", function (e) {
-    e.preventDefault(); // Prevent gesture zooming
+
+document.addEventListener('gesturestart', function(e) {
+
+    // If the gesture is outside the zoomable div, prevent it
+    if (!page.contains(e.target)) {
+        e.preventDefault(); // Block zooming outside the div
+    }
 });
-
-// document.addEventListener('gesturestart', function(e) {
-
-//     // If the gesture is outside the zoomable div, prevent it
-//     if (!page.contains(e.target)) {
-//         e.preventDefault(); // Block zooming outside the div
-//     }
-// });
 
 
 
