@@ -2,22 +2,18 @@
 
 *, html {padding: 0; margin: 0; box-sizing: border-box;}
 
-html { font-size: 16px;}
+html { font-size: 17px;}
 @media screen and (min-width: 600px) {html {font-size: 18px;} }
 
 :root {    
     --licht: rgb(255, 236, 236);
-    --blauw: #f75757;
-    --blauw2: #ff0000;
-    --kleur: #d47474;;
-    
+    --kleur: #d47474;
+    --kleur2: #f75757;
 }
 
 body {
     width: 100vw;
     height: 100svh;
-
-    padding: 20px 0;
 
     overflow: hidden;
 
@@ -26,74 +22,45 @@ body {
     justify-content: center;
     align-items: center;
 
-    background: url(dithered-image\ \(8\).png) 45% center no-repeat;
+    background: url(fotos/mijn_bureau.png) 45% center no-repeat;
     background-size: cover;
     background-color: #ffdbdb;
 }
 
-mark, a {
-    border-radius: 0.1em;
-}
-
 header {font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif}
 
-header h1 { text-align: center; font-weight:lighter;}
-header h1 mark { color: var(--licht); background-color: rgba(4, 2, 4, 0); text-shadow: var(--kleur) 0px 0px 5px, var(--kleur) 0px 0px 10px, var(--kleur) 0px 0px 15px;}
-
-header p { text-align: center; font-size: 1em; font-weight: 600;} 
-header p mark { color: var(--licht); background-color: rgba(4, 2, 4, 0);text-shadow: var(--kleur) 0px 0px 5px, var(--kleur) 0px 0px 10px, var(--kleur) 0px 0px 15px;}
+header h1 { text-align: center; font-weight:lighter; color: var(--licht); background-color: rgba(4, 2, 4, 0); text-shadow: var(--kleur) 0px 0px 5px, var(--kleur) 0px 0px 10px, var(--kleur) 0px 0px 15px;}
+header p { text-align: center; font-size: 1em; font-weight: 600;color: var(--licht); text-shadow: var(--kleur) 0px 0px 5px, var(--kleur) 0px 0px 10px, var(--kleur) 0px 0px 15px;} 
 
 aside p { text-align: center; font-size: 1.2em; font-weight: 100; font-family: "Vibur", cursive;}
 aside p { color: var(--licht); background-color: rgba(4, 2, 4, 0); padding: 0 1px; text-shadow: var(--kleur) 0px 0px 5px, var(--kleur) 0px 0px 10px;}
 
-.flicker-slow{
-    animation: flicker 3s linear infinite;
-  }
+.flicker-slow{ animation: flicker 3s linear infinite;}
+.flicker-fast{ animation: flicker 1s linear infinite;}
   
-  .flicker-fast{
-    animation: flicker 1s linear infinite;
+@keyframes flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: .99;   
   }
-  
-  @keyframes flicker {
-      0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
-        opacity: .99;
-          
-      }
-      20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
-          opacity: 0.4;
-      }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+      opacity: 0.4;
   }
-img {
-    width: 100%;
-    height: 100%;
 }
 
-
 a {
-    color: var(--licht);
-    font-size: 1.4em;
-    font-weight: 400;
-    font-family: "Vibur", cursive;
-    font-style: normal;
+  color: var(--licht);
+  font-size: 1.4em;
+  font-weight: 400;
+  font-family: "Vibur", cursive;
 
+  padding: 20px;
 
-    margin: 0 auto;
+  text-shadow: var(--kleur) 0px 0px 5px, var(--kleur) 0px 0px 10px;
 
-    /* border: 3px solid rgb(215, 215, 255); */
-    /* padding: 8px 12px;
-    border-radius: 10px; */
-    padding: 20px;
-    text-shadow: var(--kleur) 0px 0px 5px, var(--kleur) 0px 0px 10px;
-    /* -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate; */
-    animation: glow 2s ease-in-out infinite alternate;
-  }
+  animation: glow 2s ease-in-out infinite alternate;
+}
   
-  @keyframes glow {
-    from {
-      text-shadow: 0 0 10px var(--licht), 0 0 20px var(--licht), 0 0 30px var(--blauw), 0 0 40px var(--blauw), 0 0 50px var(--blauw), 0 0 60px var(--blauw), 0 0 70px var(--blauw);
-    }
-    to {
-      text-shadow: 0 0 20px var(--licht), 0 0 30px var(--blauw), 0 0 40px var(--blauw), 0 0 50px var(--blauw), 0 0 60px var(--blauw), 0 0 70px var(--blauw), 0 0 80px var(--blauw);
-    }
-  }
+@keyframes glow {
+  from { text-shadow: 0 0 10px var(--licht), 0 0 20px var(--licht), 0 0 30px var(--kleur2), 0 0 40px var(--kleur2), 0 0 50px var(--kleur2), 0 0 60px var(--kleur2), 0 0 70px var(--kleur2);}
+  to { text-shadow: 0 0 20px var(--licht), 0 0 30px var(--kleur2), 0 0 40px var(--kleur2), 0 0 50px var(--kleur2), 0 0 60px var(--kleur2), 0 0 70px var(--kleur2), 0 0 80px var(--kleur2);}
+}

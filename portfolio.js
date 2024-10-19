@@ -60,10 +60,10 @@ function volgende() {
 
 
 function kleurtje(richting) {
-    let hue = Math.floor(Math.random() * 360) 
+    // let hue = Math.floor(Math.random() * 360) 
 
     richting.style.transition = "none";
-    richting.style.backgroundColor = "hsl(" + hue + ", 21%, 52%)";
+    richting.style.backgroundColor = "var(--light-pink)";
 
     setTimeout(function() {
         richting.style.transition = "background-color 1s ease";
