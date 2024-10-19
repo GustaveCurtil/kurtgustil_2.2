@@ -90,34 +90,34 @@ function updateWebite(volgordenummer){
 }
 
 
-// document.addEventListener('gesturestart', function(e) {
-//     beelden.forEach(beeld => {
-//         if (!beeld.contains(e.target)) {
-//             e.preventDefault(); // Block zooming outside the div
-//         }
-//     });
-// });
-
-beelden.forEach(beeld => {
-    beeld.addEventListener('gesturestart', function(e) {
-        // Allow zooming only for this specific 'beeld'
-        e.preventDefault(); // Prevent default zooming behavior
-        beeld.style.transition = "transform 0.25s ease"; // Smooth transition
-        // Add any zoom logic here (like scale)
-    });
-
-    beeld.addEventListener('gesturechange', function(e) {
-        // Calculate the scale based on the gesture scale
-        const scale = e.scale; // e.scale is the scale factor from the gesture
-        beeld.style.transform = `scale(${scale})`; // Apply the scale to the 'beeld'
-        e.preventDefault(); // Prevent default zooming behavior
-    });
-
-    beeld.addEventListener('gestureend', function(e) {
-        // Optionally reset the transformation or handle zoom end
-        e.preventDefault(); // Prevent default zooming behavior
+document.addEventListener('gesturestart', function(e) {
+    beelden.forEach(beeld => {
+        if (!beeld.contains(e.target)) {
+            e.preventDefault(); // Block zooming outside the div
+        }
     });
 });
+
+// beelden.forEach(beeld => {
+//     beeld.addEventListener('gesturestart', function(e) {
+//         // Allow zooming only for this specific 'beeld'
+//         e.preventDefault(); // Prevent default zooming behavior
+//         beeld.style.transition = "transform 0.25s ease"; // Smooth transition
+//         // Add any zoom logic here (like scale)
+//     });
+
+//     beeld.addEventListener('gesturechange', function(e) {
+//         // Calculate the scale based on the gesture scale
+//         const scale = e.scale; // e.scale is the scale factor from the gesture
+//         beeld.style.transform = `scale(${scale})`; // Apply the scale to the 'beeld'
+//         e.preventDefault(); // Prevent default zooming behavior
+//     });
+
+//     beeld.addEventListener('gestureend', function(e) {
+//         // Optionally reset the transformation or handle zoom end
+//         e.preventDefault(); // Prevent default zooming behavior
+//     });
+// });
 
 
 
