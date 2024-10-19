@@ -6,7 +6,6 @@
 }
 
 html {
-    font-size: 16px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -15,7 +14,7 @@ html {
     --light-pink: rgb(255, 219, 219);
     --background-white: rgb(252, 252, 252);
     --black: rgb(54, 54, 54);
-    --height-titel: 25px;
+    --height-titel: 30px;
     --height-nav: 35px;
 }
 
@@ -33,7 +32,7 @@ body {
 
     overflow: hidden;
 
-    font-weight: 400;
+    font-weight: 300;
     color: var(--dark-pink);
     background-color: var(--light-pink);
 }
@@ -52,7 +51,7 @@ header h1 {
     color: var(--dark-pink);
 
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 1.4em;
     line-height: var(--height-titel);
     
@@ -103,7 +102,7 @@ nav a.actief { text-decoration: none; background-color: var(--background-white);
 main {
     grid-area: main;
     
-    position:static;
+    position: static;
     width: 100%;
     height: calc(100svh - var(--height-nav) - var(--height-titel));
 
@@ -113,8 +112,6 @@ main {
 }
 
 .pagewrapper{
-    min-height: calc(100% - 5vw);
-    width: 95%;
-
-    margin: 2.5vw auto;
+    width: 100%;
+    padding: 2.5vw;
 }

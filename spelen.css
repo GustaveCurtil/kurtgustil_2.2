@@ -1,35 +1,7 @@
-html {
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
 :root {
-    --dark-pink: #3e3020;
-    --light-pink: #ad8b6f;
-    --background-white: hsl(228, 7%, 60%);
+    --light-pink: #382c23;
 }
 
-.soaai {
-    font-family: Arial, Helvetica, sans-serif;
-}
-/* 
-body {
-    animation: glow 45s infinite;
-} */
-
-@keyframes glow {
-    0% {
-        background-color: var(--light-pink);
-    }
-    50% {
-        background-color: #d9b086;
-    }
-    100% {
-        background-color: var(--light-pink);
-    }
-}
-.klein {
-    font-size: 0.7em;
-}
 main {
     height: 100svh;
     display: flex;
@@ -41,26 +13,3 @@ main {
     background-size: contain;
 }
 
-
-.bold {
-    font-weight: normal;
-}
-
-nav a.actief {
-    font-weight: normal;
-}
-
-main p {
-    margin: auto;
-}
-
-#bloem {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-}
-
-   img {
-    width: 69%;
-    max-width: 400px;
-   } 
