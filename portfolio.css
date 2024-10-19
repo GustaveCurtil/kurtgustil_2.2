@@ -26,6 +26,10 @@ section#website article.actief {
 }
 
 /* UITLEG */
+.informatie#websites {
+    justify-content: start;
+}
+
 h3 {
     text-align: center;
     font-size: 1.1em;
@@ -169,7 +173,7 @@ section#selectie {
     position: absolute;
     bottom: calc(var(--height-nav));
 
-    border-top: 2px solid var(--dark-pink);
+    border-top: 1px solid var(--dark-pink);
 
     display: flex;
     justify-content: center;
@@ -196,11 +200,11 @@ section#selectie div.actief {
     text-decoration: none;
 }
 
-section#selectie div a {
-    font-size: 1.6em;
-    line-height: 1.6em;
+section#selectie div {
+    font-size: 1.5em;
+    line-height: 1.5em;
 
-    font-weight: 600;
+    font-weight: 300;
 
     color: var(--dark-pink);
 
@@ -213,6 +217,12 @@ section#selectie div a {
     width: calc(100% / 3);
     transition: background-color 1.5s ease; /* 1 second fade-out effect */
   }
+
+#hyperlinks a {
+    display: none;
+    font-size: 0.8em;
+    
+}
 
 
 

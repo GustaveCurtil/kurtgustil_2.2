@@ -2,13 +2,13 @@
 
 *, html {padding: 0; margin: 0; box-sizing: border-box;}
 
-html { font-size: 20px;}
-@media screen and (min-width: 600px) {html {font-size: 26px;} }
+html { font-size: 16px;}
+@media screen and (min-width: 600px) {html {font-size: 18px;} }
 
 :root {
-    --neon: rgb(91, 255, 85) 0px 0px 5px, rgb(91, 255, 85) 0px 0px 10px, rgb(91, 255, 85) 0px 0px 15px;
+    --neon: rgb(111, 120, 190) 0px 0px 5px, rgb(111, 120, 190) 0px 0px 10px, rgb(111, 120, 190) 0px 0px 15px;
     --neon-roos: rgb(255, 78, 205) 0px 0px 5px, rgb(254, 4, 183) 0px 0px 10px;
-    --neon-blauw: rgb(85, 122, 255) 0px 0px 5px, rgb(85, 122, 255) 0px 0px 10px;
+    --neon-blauw: rgb(111, 120, 190) 0px 0px 5px, rgb(111, 120, 190) 0px 0px 10px;
     --licht: rgb(248, 248, 255);
     --licht-roos: rgb(255, 246, 254);
     --licht-blauw: rgb(248, 248, 255);
@@ -18,7 +18,7 @@ body {
     width: 100vw;
     height: 100svh;
 
-    padding: 30px 0;
+    padding: 20px 0;
 
     overflow: hidden;
 
@@ -36,12 +36,12 @@ mark, a {
     border-radius: 0.1em;
 }
 
-header {font-family: Arial, Helvetica, sans-serif;}
+header {font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif}
 
-header h1 { text-align: center; font-weight: 100;}
+header h1 { text-align: center; font-weight:lighter;}
 header h1 mark { color: var(--licht); background-color: #cee74100; text-shadow: var(--neon);}
 
-header p { text-align: center; font-size: 1.1em; font-weight: 700;} 
+header p { text-align: center; font-size: 1.1em; font-weight: 300;} 
 header p mark { color: var(--licht); background-color: #0ca78800; text-shadow: var(--neon);}
 
 aside p { text-align: center; font-size: 1.2em; font-weight: 100; font-family: "Vibur", cursive;}

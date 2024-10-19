@@ -6,7 +6,7 @@
 }
 
 html {
-    font-size: 18px;
+    font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -16,8 +16,8 @@ html {
     --background-white: #fcfcfc;
     --black: rgb(54, 54, 54);
     --matching-color: rgb(107, 113, 158);
-    --height-titel: 40px;
-    --height-nav: 40px;
+    --height-titel: 25px;
+    --height-nav: 35px;
 }
 
 body {
@@ -48,14 +48,18 @@ header {
     width: 100%;
 
     overflow: hidden;
-    border-bottom: 2px solid var(--dark-pink);
+    border-bottom: 1px solid var(--dark-pink);
 }
 
 header h1 {
     font-size: 1.4em;
     line-height: var(--height-titel);
+    color: var(--dark-pink);
 
-    font-weight: 300;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+    font-weight: 100;
 
     width: max-content;
     
@@ -67,8 +71,14 @@ header h1 {
     transform: translateX(-50%);
     position: relative;
     left: 50%;
+
+    letter-spacing: 0em;
+    /* text-shadow: var(--light-pink) 0.05em 0.05em 0px, #8d8d8d 0.1em 0.1em 0px; */
+
+    /* -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--light-pink); */
 }
-header h1 span {font-weight: 600;}
+header h1 span {font-weight: 500;}
 
 nav {
     grid-area: nav;
@@ -90,14 +100,12 @@ nav a {
 
     text-decoration: none;
 
-    border-top: 2px solid var(--dark-pink);
+    border-top: 1px solid var(--dark-pink);
     border-right: 1px solid var(--dark-pink);
-    border-left: 1px solid var(--dark-pink);
 }
 
-nav a:first-of-type {border-left: 0;}
 nav a:last-of-type {border-right: 0;}
-nav a.actief {background-color: var(--background-white); font-weight: 600;}
+nav a.actief {background-color: var(--background-white); font-style: italic;}
 
 
 main {
