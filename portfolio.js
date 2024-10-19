@@ -102,7 +102,8 @@ document.addEventListener('gesturestart', function(e) {
 alleBeelden.forEach(beeld => {
     let touchX
     let touchY
-    beeld.addEventListener('touchstart', preventCopy, (e) => {
+    beeld.addEventListener('touchstart', (e) => {
+        e.preventDefault();
         let img = beeld.querySelector('img');
         const rect = beeld.getBoundingClientRect();
         touchX = e.changedTouches[0].clientX - rect.left;
@@ -118,6 +119,7 @@ alleBeelden.forEach(beeld => {
     })
 
     beeld.addEventListener('touchmove', (e) => {
+        e.preventDefault();
         let img = beeld.querySelector('img');
         const rect = beeld.getBoundingClientRect();
         touchX = e.changedTouches[0].clientX - rect.left;
