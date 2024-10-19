@@ -58,6 +58,12 @@ h3 a {
 
 .uitleg p { margin-bottom: 2.5vw;}
 
+.uitleg p a {
+    color: var(--dark-pink);
+
+    font-size: 1.1em;
+}
+
 .informatie#websites article { justify-content: start;}
 .informatie#websites article .uitleg { display: block;}
 

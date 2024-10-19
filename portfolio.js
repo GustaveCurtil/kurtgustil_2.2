@@ -85,6 +85,7 @@ function updateWebite(volgordenummer){
         
     })
     website.classList.add('actief');
+    pagina.scrollTop = 0;
 }
 
 
