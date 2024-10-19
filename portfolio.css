@@ -50,6 +50,7 @@ h3 a {
 .uitleg p {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     width: 100%;
+    font-size: 0.9em;
     line-height: 1.6em;
     font-weight: 100;
 }
