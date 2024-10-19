@@ -5,13 +5,12 @@
 html { font-size: 16px;}
 @media screen and (min-width: 600px) {html {font-size: 18px;} }
 
-:root {
-    --neon: rgb(111, 120, 190) 0px 0px 5px, rgb(111, 120, 190) 0px 0px 10px, rgb(111, 120, 190) 0px 0px 15px;
-    --neon-roos: rgb(255, 78, 205) 0px 0px 5px, rgb(254, 4, 183) 0px 0px 10px;
-    --neon-blauw: rgb(111, 120, 190) 0px 0px 5px, rgb(111, 120, 190) 0px 0px 10px;
-    --licht: rgb(248, 248, 255);
-    --licht-roos: rgb(255, 246, 254);
-    --licht-blauw: rgb(248, 248, 255);
+:root {    
+    --licht: rgb(255, 236, 236);
+    --blauw: #f75757;
+    --blauw2: #ff0000;
+    --kleur: #d47474;;
+    
 }
 
 body {
@@ -24,10 +23,10 @@ body {
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
-    background: url(achtergrond_gameboy_thema.png) center center no-repeat;
+    background: url(dithered-image\ \(8\).png) 45% center no-repeat;
     background-size: cover;
     background-color: #ffdbdb;
 }
@@ -39,15 +38,14 @@ mark, a {
 header {font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif}
 
 header h1 { text-align: center; font-weight:lighter;}
-header h1 mark { color: var(--licht); background-color: #cee74100; text-shadow: var(--neon);}
+header h1 mark { color: var(--licht); background-color: rgba(4, 2, 4, 0); text-shadow: var(--kleur) 0px 0px 5px, var(--kleur) 0px 0px 10px, var(--kleur) 0px 0px 15px;}
 
-header p { text-align: center; font-size: 1.1em; font-weight: 300;} 
-header p mark { color: var(--licht); background-color: #0ca78800; text-shadow: var(--neon);}
+header p { text-align: center; font-size: 1em; font-weight: 600;} 
+header p mark { color: var(--licht); background-color: rgba(4, 2, 4, 0);text-shadow: var(--kleur) 0px 0px 5px, var(--kleur) 0px 0px 10px, var(--kleur) 0px 0px 15px;}
 
 aside p { text-align: center; font-size: 1.2em; font-weight: 100; font-family: "Vibur", cursive;}
-aside p { color: var(--licht-blauw); background-color: rgba(4, 2, 4, 0); padding: 0 1px; text-shadow: var(--neon-blauw);}
-/* aside p:last-child { font-size: 1.4em; font-weight: 900; font-family: monospace;}
-aside p:last-child mark { color: #F24726; background-color: #FEF445;} */
+aside p { color: var(--licht); background-color: rgba(4, 2, 4, 0); padding: 0 1px; text-shadow: var(--kleur) 0px 0px 5px, var(--kleur) 0px 0px 10px;}
+
 .flicker-slow{
     animation: flicker 3s linear infinite;
   }
@@ -70,11 +68,9 @@ img {
     height: 100%;
 }
 
-section { width: 90%; max-width: 450px; background-color: #f5f3bfc4;}
-section p { width: 95%; margin: 0.3em auto;}
 
 a {
-    color: var(--licht-roos);
+    color: var(--licht);
     font-size: 1.4em;
     font-weight: 400;
     font-family: "Vibur", cursive;
@@ -84,10 +80,10 @@ a {
     margin: 0 auto;
 
     /* border: 3px solid rgb(215, 215, 255); */
-    padding: 8px 12px;
-    border-radius: 10px;
-
-    text-shadow: var(--neon-blauw);
+    /* padding: 8px 12px;
+    border-radius: 10px; */
+    padding: 20px;
+    text-shadow: var(--kleur) 0px 0px 5px, var(--kleur) 0px 0px 10px;
     /* -webkit-animation: glow 1s ease-in-out infinite alternate;
     -moz-animation: glow 1s ease-in-out infinite alternate; */
     animation: glow 2s ease-in-out infinite alternate;
@@ -95,11 +91,9 @@ a {
   
   @keyframes glow {
     from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px rgb(85, 122, 255), 0 0 40px rgb(85, 122, 255), 0 0 50px rgb(85, 122, 255), 0 0 60px rgb(85, 122, 255), 0 0 70px rgb(85, 122, 255);
-        box-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px rgb(200, 212, 255), 0 0 4px rgb(200, 212, 255), 0 0 5px rgb(200, 212, 255);
+      text-shadow: 0 0 10px var(--licht), 0 0 20px var(--licht), 0 0 30px var(--blauw), 0 0 40px var(--blauw), 0 0 50px var(--blauw), 0 0 60px var(--blauw), 0 0 70px var(--blauw);
     }
     to {
-      box-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px rgb(200, 212, 255), 0 0 8px rgb(200, 212, 255), 0 0 10px rgb(200, 212, 255);
-        text-shadow: 0 0 20px #fff, 0 0 30px rgb(85, 122, 255), 0 0 40px rgb(85, 122, 255), 0 0 50px rgb(85, 122, 255), 0 0 60px rgb(85, 122, 255), 0 0 70px rgb(85, 122, 255), 0 0 80px rgb(85, 122, 255);
+      text-shadow: 0 0 20px var(--licht), 0 0 30px var(--blauw), 0 0 40px var(--blauw), 0 0 50px var(--blauw), 0 0 60px var(--blauw), 0 0 70px var(--blauw), 0 0 80px var(--blauw);
     }
   }
