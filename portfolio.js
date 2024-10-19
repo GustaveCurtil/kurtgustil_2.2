@@ -89,15 +89,12 @@ function updateWebite(volgordenummer){
     pagina.scrollTop = 0;
 }
 
-document.addEventListener("gesturestart", function (e) {
-    e.preventDefault(); // Prevent gesture zooming
-});
 
 document.addEventListener('gesturestart', function(e) {
     beelden.forEach(beeld => {
         if (!beeld.contains(e.target)) {
             e.preventDefault(); // Block zooming outside the div
-        }  
+        }
     });
 });
 
