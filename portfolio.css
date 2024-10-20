@@ -108,7 +108,7 @@ section#selectie div {
     text-decoration: none;
 }
 
-section#selectie div.actief {font-weight: 900; font-size: 1.6em;}
+section#selectie div.actief {font-weight: 600; font-size: 2em;}
 
 #selectie svg { width: calc(100% / 3);}
 #selectie svg.einde {
