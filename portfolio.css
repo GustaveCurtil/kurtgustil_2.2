@@ -70,11 +70,6 @@ main {
     line-height: 0;
 }
 
-/* figure img {
-    scale: 200%;
-    transform-origin: 0 0;
-} */
-
 
 /*/ / COMMANDO'S / /*/
 
@@ -106,9 +101,15 @@ section#selectie div {
     color: var(--dark-pink);
 
     text-decoration: none;
+    transition: transform 0.5s ease-out;
+    transform: rotate(0deg);
 }
 
-section#selectie div.actief {font-weight: 600; font-size: 2em;}
+section#selectie div.actief {
+    transition: transform 0.5s ease-out;
+    transform: rotate(90deg)
+}
+
 
 #selectie svg { width: calc(100% / 3);}
 #selectie svg.einde {
@@ -121,6 +122,7 @@ section#selectie div.actief {font-weight: 600; font-size: 2em;}
     width: 100%;
     height: fit-content;
     margin-bottom: 2.5vw;
+    border-bottom: 0.5px solid var(--kleur-browser);
 }
 
 .window {
@@ -132,6 +134,7 @@ section#selectie div.actief {font-weight: 600; font-size: 2em;}
     overflow-y:scroll;
     border: 0.5px solid var(--kleur-browser);
     border-top: 0;
+    border-bottom: 0;
 }
 
 .noscroll .window { overflow: hidden;}
