@@ -102,16 +102,19 @@ document.addEventListener('gesturestart', function(e) {
 alleBeelden.forEach(beeld => {
     let touchX
     let touchY
+    let newX;
+    let newY;
+
+
     beeld.addEventListener('touchstart', (e) => {
         e.preventDefault();
         let img = beeld.querySelector('img');
         const rect = beeld.getBoundingClientRect();
         touchX = e.changedTouches[0].clientX - rect.left;
         touchY = e.changedTouches[0].clientY - rect.top;
-        console.log(touchX);
-        console.log(touchY);
+        setCoordinates(touchX, touchY);
         img.style.scale = '300%';
-        img.style.transformOrigin = `${touchX}px ${touchY}px`;
+        img.style.transformOrigin = `${newX}px ${newY}px`;
     })
 
     beeld.addEventListener('touchend', (e) => {
@@ -124,14 +127,39 @@ alleBeelden.forEach(beeld => {
         const rect = beeld.getBoundingClientRect();
         touchX = e.changedTouches[0].clientX - rect.left;
         touchY = e.changedTouches[0].clientY - rect.top;
+        setCoordinates(touchX, touchY);
+
         if (touchX < beeld.clientWidth && touchX > 0 && touchY < beeld.clientHeight && touchY > 0) {
             img.style.scale = '300%';
-            img.style.transformOrigin = `${touchX}px ${touchY}px`;
+            img.style.transformOrigin = `${newX}px ${newY}px`;
         } else {
             resetScale(beeld);
         }
     })
+
+    function setCoordinates(touchX, touchY) {
+        let width = beeld.clientWidth;
+        let height = beeld.clientHeight;
+    
+        // Calculate coefX and coefY as the normalized touch position (between 0 and 1)
+        let coefX = touchX / width;
+        let coefY = touchY / height;
+    
+        let power = 6; // Controls the speed of movement near the center; adjust as necessary
+
+        let scaleX = coefX < 0.5
+            ? 0.5 * Math.pow(2 * coefX, power) // For coefX less than 0.5, scale upwards quickly
+            : 1 - 0.5 * Math.pow(2 * (1 - coefX), power); // For coefX greater than 0.5, scale down
+    
+        let scaleY = coefY < 0.5
+            ? 0.5 * Math.pow(2 * coefY, power) // Same for Y
+            : 1 - 0.5 * Math.pow(2 * (1 - coefY), power);
+    
+        // Calculate the newX and newY based on the scaling, ensuring they don't exceed bounds
+        newX = scaleX * width;
+        newY = scaleY * height;   }
 });
+
 
 function resetScale(beeld) {
     let img = beeld.querySelector('img');
