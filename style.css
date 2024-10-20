@@ -6,6 +6,7 @@
 }
 
 html {
+    font-size: 15px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -114,4 +115,20 @@ main {
 .pagewrapper{
     width: 100%;
     padding: 2.5vw;
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        grid-template-areas:  
+        "header"
+        "nav"
+        "main";
+    }
+
+    nav a {
+        border-top: 0px;
+        border-bottom: 1px solid var(--dark-pink);
+
+    }
+    
 }

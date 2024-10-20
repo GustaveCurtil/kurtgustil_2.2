@@ -26,7 +26,12 @@ VOORLOPIG ENKEL FOCUSSEN OP MOBILE met de hoop dat er vanzelf een ontwerp zal ui
     - beschrijving per website toevoegen
     - link naar website ook!
 - CSS bestanden eens grondig 'kuisen'
-- 
+- keyboard pijlen gebruiken voor de navigeren door portfolio
+- informatie groter wanneer actief
+- browsers allen dezelfde kleur gewoon
+- opnieuw sfeerbeelden sites maken met 150% zoom
+- desktop versie opdelen in 3 kolommen (browser | tekst | sfeerbeelden)
+- info banger-van-een-tekst maken
 
 ## Planning
 - overschakelen naar Laravel? 

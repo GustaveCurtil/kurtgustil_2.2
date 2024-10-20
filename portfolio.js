@@ -39,11 +39,13 @@ function vorige() {
 
     if (volgordenummer > 0) {
         volgordenummer -= 1;
-    } else {
-        volgordenummer = websites.length - 1;
+        kleurtje(links);
+        rechts.classList.remove("einde");
+        if (volgordenummer == 0) {
+            links.classList.add("einde");
+        }
     }
 
-    kleurtje(links);
     updateWebite(volgordenummer);
 }
 
@@ -51,8 +53,11 @@ function volgende() {
 
     if (volgordenummer < (websites.length - 1)) {
         volgordenummer += 1;
-    } else {
-        volgordenummer = 0;
+        kleurtje(rechts);
+        links.classList.remove("einde");
+        if (volgordenummer == (websites.length - 1)) {
+            rechts.classList.add("einde");
+        }
     }
 
     kleurtje(rechts);
@@ -113,7 +118,7 @@ alleBeelden.forEach(beeld => {
         touchX = e.changedTouches[0].clientX - rect.left;
         touchY = e.changedTouches[0].clientY - rect.top;
         setCoordinates(touchX, touchY);
-        img.style.transform = `scale(2.5)`;
+        img.style.transform = `scale(2)`;
         img.style.transformOrigin = `${newX}px ${newY}px`;
     })
 
@@ -130,7 +135,7 @@ alleBeelden.forEach(beeld => {
         setCoordinates(touchX, touchY);
 
         if (touchX < beeld.clientWidth && touchX > 0 && touchY < beeld.clientHeight && touchY > 0) {
-            img.style.transform = `scale(2.5)`;
+            img.style.transform = `scale(2)`;
             img.style.transformOrigin = `${newX}px ${newY}px`;
         } else {
             resetScale(beeld);

@@ -5,12 +5,11 @@ header.addEventListener('click', (e) => {
 })
 
 
-let kopierKnop = document.querySelectorAll(".kopieer button");
+let kopieerKnop = document.querySelector(".contact button");
 
-kopierKnop.forEach(button => {
-    button.addEventListener('click', () => {
-        console.log(button.id)
-        navigator.clipboard.writeText(button.id);
-        alert("je hebt '" + button.id + "' gekopieerd")
-    })
-});
+
+kopieerKnop.addEventListener('click', () => {
+    console.log(kopieerKnop.id)
+    navigator.clipboard.writeText(kopieerKnop.id);
+    alert("Proficiat! Je hebt '" + kopieerKnop.id + "' gekopieerd")
+})

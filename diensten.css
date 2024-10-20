@@ -9,7 +9,12 @@ li {
 
 h3 {
     margin-bottom: 2.5vw;
+    margin-top: 2.5vw;
     font-size: 1em;
+}
+
+h3:not(:first-child) {
+    margin-top: 5vw;
 }
 
 ul {
@@ -17,7 +22,8 @@ ul {
 }
 
 p {
-    margin-bottom: 2.5vw;  
+    margin-bottom: 2.5vw; 
+    line-height: 1.4em; 
 }
 
 
@@ -32,12 +38,6 @@ button {
     padding: 0 2px;
 }
 
-.cursief {
-    font-style: italic;
-    color: var(--matching-color);
-    /* text-decoration: dashed 1px var(--dark-pink) underline;
-    text-underline-offset: 3px; */
-}
 
 .bold {
     font-weight: 600;
@@ -45,15 +45,20 @@ button {
 
 
 .contact {
-    border: 2px dotted var(--dark-pink);
+    border: 1px dotted var(--dark-pink);
     padding: 2.5vw;
     text-align: center;
     display: flex;
     flex-direction: column;
+    margin: 5vw 0;
 }
 
 .contact > *:not(a){
     margin-bottom: 5px;
+}
+
+a {
+    color: var(--dark-pink);
 }
 
 .klein {
@@ -66,7 +71,8 @@ button {
     display: flex;
     height: fit-content;
     line-height: 0;
-    margin: 10px auto;
+    margin: 5vw auto;
+    
 }
 
 .photo {
@@ -103,4 +109,6 @@ button {
 
 img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
