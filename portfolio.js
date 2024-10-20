@@ -113,7 +113,7 @@ alleBeelden.forEach(beeld => {
         touchX = e.changedTouches[0].clientX - rect.left;
         touchY = e.changedTouches[0].clientY - rect.top;
         setCoordinates(touchX, touchY);
-        img.style.scale = '300%';
+        img.style.transform = `scale(2.5)`;
         img.style.transformOrigin = `${newX}px ${newY}px`;
     })
 
@@ -130,7 +130,7 @@ alleBeelden.forEach(beeld => {
         setCoordinates(touchX, touchY);
 
         if (touchX < beeld.clientWidth && touchX > 0 && touchY < beeld.clientHeight && touchY > 0) {
-            img.style.scale = '300%';
+            img.style.transform = `scale(2.5)`;
             img.style.transformOrigin = `${newX}px ${newY}px`;
         } else {
             resetScale(beeld);
@@ -145,7 +145,7 @@ alleBeelden.forEach(beeld => {
         let coefX = touchX / width;
         let coefY = touchY / height;
     
-        let power = 6; // Controls the speed of movement near the center; adjust as necessary
+        let power = 5; // Controls the speed of movement near the center; adjust as necessary
 
         let scaleX = coefX < 0.5
             ? 0.5 * Math.pow(2 * coefX, power) // For coefX less than 0.5, scale upwards quickly
@@ -163,7 +163,7 @@ alleBeelden.forEach(beeld => {
 
 function resetScale(beeld) {
     let img = beeld.querySelector('img');
-    img.style.scale = '100%';
+    img.style.transform = `scale(1)`;
     img.style.transformOrigin = "center center";
 }
 
