@@ -84,8 +84,8 @@ function updateWebite(volgordenummer){
     let kleur = "hsl(" + hue + ", 20%, 69%)";
     let kleurAchtergrond = "hsl(" + hue + ", 69%, 90%)";
 
-    root.style.setProperty('--kleur-browser', kleur);
-    root.style.setProperty('--kleur-browser-licht', kleurAchtergrond);
+    // root.style.setProperty('--kleur-browser', kleur);
+    // root.style.setProperty('--kleur-browser-licht', kleurAchtergrond);
 
     websites.forEach(website => {
         website.classList.remove('actief');
@@ -96,81 +96,81 @@ function updateWebite(volgordenummer){
 }
 
 
-document.addEventListener('gesturestart', function(e) {
-    beelden.forEach(beeld => {
-        if (!beeld.contains(e.target)) {
-            e.preventDefault(); // Block zooming outside the div
-        }
-    });
-});
+// document.addEventListener('gesturestart', function(e) {
+//     beelden.forEach(beeld => {
+//         if (!beeld.contains(e.target)) {
+//             e.preventDefault(); // Block zooming outside the div
+//         }
+//     });
+// });
 
-alleBeelden.forEach(beeld => {
-    let touchX
-    let touchY
-    let newX;
-    let newY;
+// alleBeelden.forEach(beeld => {
+//     let touchX
+//     let touchY
+//     let newX;
+//     let newY;
 
 
-    beeld.addEventListener('touchstart', (e) => {
-        e.preventDefault();
-        let img = beeld.querySelector('img');
-        const rect = beeld.getBoundingClientRect();
-        touchX = e.changedTouches[0].clientX - rect.left;
-        touchY = e.changedTouches[0].clientY - rect.top;
-        setCoordinates(touchX, touchY);
-        img.style.transform = `scale(2)`;
-        img.style.transformOrigin = `${newX}px ${newY}px`;
-    })
+//     beeld.addEventListener('touchstart', (e) => {
+//         e.preventDefault();
+//         let img = beeld.querySelector('img');
+//         const rect = beeld.getBoundingClientRect();
+//         touchX = e.changedTouches[0].clientX - rect.left;
+//         touchY = e.changedTouches[0].clientY - rect.top;
+//         setCoordinates(touchX, touchY);
+//         img.style.transform = `scale(2)`;
+//         img.style.transformOrigin = `${newX}px ${newY}px`;
+//     })
 
-    beeld.addEventListener('touchend', (e) => {
-        resetScale(beeld);
-    })
+//     beeld.addEventListener('touchend', (e) => {
+//         resetScale(beeld);
+//     })
 
-    beeld.addEventListener('touchmove', (e) => {
-        e.preventDefault();
-        let img = beeld.querySelector('img');
-        const rect = beeld.getBoundingClientRect();
-        touchX = e.changedTouches[0].clientX - rect.left;
-        touchY = e.changedTouches[0].clientY - rect.top;
-        setCoordinates(touchX, touchY);
+//     beeld.addEventListener('touchmove', (e) => {
+//         e.preventDefault();
+//         let img = beeld.querySelector('img');
+//         const rect = beeld.getBoundingClientRect();
+//         touchX = e.changedTouches[0].clientX - rect.left;
+//         touchY = e.changedTouches[0].clientY - rect.top;
+//         setCoordinates(touchX, touchY);
 
-        if (touchX < beeld.clientWidth && touchX > 0 && touchY < beeld.clientHeight && touchY > 0) {
-            img.style.transform = `scale(2)`;
-            img.style.transformOrigin = `${newX}px ${newY}px`;
-        } else {
-            resetScale(beeld);
-        }
-    })
+//         if (touchX < beeld.clientWidth && touchX > 0 && touchY < beeld.clientHeight && touchY > 0) {
+//             img.style.transform = `scale(2)`;
+//             img.style.transformOrigin = `${newX}px ${newY}px`;
+//         } else {
+//             resetScale(beeld);
+//         }
+//     })
 
-    function setCoordinates(touchX, touchY) {
-        let width = beeld.clientWidth;
-        let height = beeld.clientHeight;
+//     function setCoordinates(touchX, touchY) {
+//         let width = beeld.clientWidth;
+//         let height = beeld.clientHeight;
     
-        // Calculate coefX and coefY as the normalized touch position (between 0 and 1)
-        let coefX = touchX / width;
-        let coefY = touchY / height;
+//         // Calculate coefX and coefY as the normalized touch position (between 0 and 1)
+//         let coefX = touchX / width;
+//         let coefY = touchY / height;
     
-        let power = 5; // Controls the speed of movement near the center; adjust as necessary
+//         let power = 5; // Controls the speed of movement near the center; adjust as necessary
 
-        let scaleX = coefX < 0.5
-            ? 0.5 * Math.pow(2 * coefX, power) // For coefX less than 0.5, scale upwards quickly
-            : 1 - 0.5 * Math.pow(2 * (1 - coefX), power); // For coefX greater than 0.5, scale down
+//         let scaleX = coefX < 0.5
+//             ? 0.5 * Math.pow(2 * coefX, power) // For coefX less than 0.5, scale upwards quickly
+//             : 1 - 0.5 * Math.pow(2 * (1 - coefX), power); // For coefX greater than 0.5, scale down
     
-        let scaleY = coefY < 0.5
-            ? 0.5 * Math.pow(2 * coefY, power) // Same for Y
-            : 1 - 0.5 * Math.pow(2 * (1 - coefY), power);
+//         let scaleY = coefY < 0.5
+//             ? 0.5 * Math.pow(2 * coefY, power) // Same for Y
+//             : 1 - 0.5 * Math.pow(2 * (1 - coefY), power);
     
-        // Calculate the newX and newY based on the scaling, ensuring they don't exceed bounds
-        newX = scaleX * width;
-        newY = scaleY * height;   }
-});
+//         // Calculate the newX and newY based on the scaling, ensuring they don't exceed bounds
+//         newX = scaleX * width;
+//         newY = scaleY * height;   }
+// });
 
 
-function resetScale(beeld) {
-    let img = beeld.querySelector('img');
-    img.style.transform = `scale(1)`;
-    img.style.transformOrigin = "center center";
-}
+// function resetScale(beeld) {
+//     let img = beeld.querySelector('img');
+//     img.style.transform = `scale(1)`;
+//     img.style.transformOrigin = "center center";
+// }
 
 // beelden.forEach(beeld => {
 //     beeld.addEventListener('gesturestart', function(e) {

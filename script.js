@@ -11,5 +11,5 @@ let kopieerKnop = document.querySelector(".contact button");
 kopieerKnop.addEventListener('click', () => {
     console.log(kopieerKnop.id)
     navigator.clipboard.writeText(kopieerKnop.id);
-    alert("Proficiat! Je hebt '" + kopieerKnop.id + "' gekopieerd")
+    alert("Yihaa! Je hebt '" + kopieerKnop.id + "' gekopieerd")
 })

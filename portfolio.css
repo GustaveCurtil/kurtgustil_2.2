@@ -1,7 +1,7 @@
 :root {
-    --kleur-browser:  hsl(69, 20%, 69%);
-    --kleur-browser-licht: hsl(69, 69%, 90%);
-    --height-commands: calc(1.5 * var(--height-nav));
+    --kleur-browser:  var(--dark-pink);
+    --kleur-browser-licht: var(--light-pink);
+    --height-commands: calc(1 * var(--height-nav));
 }
 
 html, body {
@@ -66,7 +66,7 @@ main {
     border: 1px solid var(--kleur-browser);
     margin: 5vw 0;
     overflow: hidden;
-    touch-action: pinch-zoom;
+    /* touch-action: pinch-zoom; */
     line-height: 0;
 }
 
@@ -129,9 +129,9 @@ section#selectie div.actief {font-weight: 600; font-size: 2em;}
 
     line-height: 0;
 
-    border-top: 0.5px solid var(--kleur-browser);
     overflow-y:scroll;
     border: 0.5px solid var(--kleur-browser);
+    border-top: 0;
 }
 
 .noscroll .window { overflow: hidden;}
@@ -139,10 +139,10 @@ section#selectie div.actief {font-weight: 600; font-size: 2em;}
 img { width: 100%; object-fit: cover;}
 
 .bar { width: 100%; aspect-ratio: 22/1; display: flex; justify-content: space-between; align-items: center;}
-.bar { background-color: var(--kleur-browser-licht);  border: 0.5px solid var(--kleur-browser); border-bottom: 0;}
+.bar { background-color: var(--kleur-browser-licht);  border: 0.5px solid var(--kleur-browser);}
 .window::-webkit-scrollbar-track { border-radius: 8px; background-color: var(--kleur-browser-licht);}
 .window::-webkit-scrollbar { width: 10px; background-color: var(--kleur-browser-licht);}
-.window::-webkit-scrollbar-thumb { border-radius: 4px; background-color: var(--kleur-browser);}
+.window::-webkit-scrollbar-thumb { border-radius: 8px; background-color: var(--kleur-browser);}
 
 .inputfield { border: 0.5px solid var(--kleur-browser);}
 .arrows { width: 6%; margin: 0 2% ; display: flex; justify-content: space-between; align-items: center;}
