@@ -75,7 +75,7 @@ h3 a {
 
 .uitleg figure {
     border: 1px solid var(--kleur-browser);
-    margin: 2.5vw 0;
+    margin: 5vw 0;
     overflow: hidden;
     touch-action: pinch-zoom;
     line-height: 0;

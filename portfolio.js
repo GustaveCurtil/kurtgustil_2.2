@@ -110,7 +110,7 @@ alleBeelden.forEach(beeld => {
         touchY = e.changedTouches[0].clientY - rect.top;
         console.log(touchX);
         console.log(touchY);
-        img.style.scale = '200%';
+        img.style.scale = '300%';
         img.style.transformOrigin = `${touchX}px ${touchY}px`;
     })
 
@@ -125,7 +125,7 @@ alleBeelden.forEach(beeld => {
         touchX = e.changedTouches[0].clientX - rect.left;
         touchY = e.changedTouches[0].clientY - rect.top;
         if (touchX < beeld.clientWidth && touchX > 0 && touchY < beeld.clientHeight && touchY > 0) {
-            img.style.scale = '200%';
+            img.style.scale = '300%';
             img.style.transformOrigin = `${touchX}px ${touchY}px`;
         } else {
             resetScale(beeld);
