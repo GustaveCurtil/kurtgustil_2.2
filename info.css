@@ -1,16 +1,18 @@
-.cursief {
+.voorbeeld {
     color: var(--matching-color);
+    font-weight: 500;
 }
 
 li {
     list-style-position: outside;
-    margin-left: 5%;
+    margin-left: 2.1em;
+    line-height: 1.6em;
 }
 
 h3 {
     margin-bottom: 2.5vw;
-    margin-top: 2.5vw;
     font-size: 1em;
+    font-style: italic;
 }
 
 h3:not(:first-child) {
@@ -18,12 +20,12 @@ h3:not(:first-child) {
 }
 
 ul {
-    margin-bottom: 5vw;
+    margin: 2.5vw 0 5vw 0;
 }
 
 p {
     margin-bottom: 2.5vw; 
-    line-height: 1.4em; 
+    line-height: 1.6em;
 }
 
 
@@ -62,8 +64,8 @@ a {
 }
 
 .klein {
-    font-weight: 300;
-    padding: 0 4px;
+    font-weight: 900;
+    padding: 0 2px;
 }
 
 

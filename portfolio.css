@@ -1,5 +1,7 @@
 :root {
-    --kleur-browser:  var(--dark-pink);
+    /* --kleur-browser:  var(--matching-color);
+    --kleur-browser-licht: rgb(56, 114, 150, 0.2); */
+    --kleur-browser: rgb(198, 82, 82);
     --kleur-browser-licht: var(--light-pink);
     --height-commands: calc(1 * var(--height-nav));
 }
@@ -39,11 +41,12 @@ main {
 /* UITLEG */
 .uitleg {
     display: none;
+
 }
 
 .uitleg p {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    width: 100%;
+
     font-size: 1em;
     line-height: 1.6em;
     font-weight: 300;
@@ -53,17 +56,34 @@ main {
     color: var(--kleur);
 }
 
-.uitleg p { margin-bottom: 2.5vw;}
+.uitleg p:not(:last-of-type, :nth-last-of-type(2)) { margin-bottom: 2.5vw;}
 
 .uitleg p a {
-    color: var(--dark-pink);
+    font-size: 1.2em;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    padding: 10vw 0;
+    
+}
+
+.uitleg p.review {
+    text-align: center;
+}
+
+.uitleg p.review span:first-of-type {
+    font-weight: 500;
+}
+
+.uitleg p.review span:last-of-type {
+    font-style: italic;
 }
 
 .informatie#websites article { justify-content: start;}
 .informatie#websites article .uitleg { display: block;}
 
 .uitleg figure {
-    border: 1px solid var(--kleur-browser);
+    border: var(--border-style);
     margin: 5vw 0;
     overflow: hidden;
     /* touch-action: pinch-zoom; */
@@ -77,7 +97,7 @@ section#selectie {
     height: var(--height-commands);
     width: 100%;
 
-    border-top: 1px solid var(--dark-pink);
+    border-top: var(--border-style);
 
     display: flex;
     justify-content: center;
