@@ -1,8 +1,8 @@
 :root {
-    /* --kleur-browser:  var(--matching-color);
-    --kleur-browser-licht: rgb(56, 114, 150, 0.2); */
-    --kleur-browser: rgb(198, 82, 82);
-    --kleur-browser-licht: var(--light-pink);
+    --kleur-browser:  var(--matching-color);
+    --kleur-browser-licht: rgb(56, 114, 150, 0.2);
+    /* --kleur-browser: rgb(198, 82, 82);
+    --kleur-browser-licht: var(--light-pink); */
     --height-commands: calc(1 * var(--height-nav));
 }
 
@@ -41,6 +41,8 @@ main {
 /* UITLEG */
 .uitleg {
     display: none;
+    height: 100%;
+    flex-direction: column;
 
 }
 
@@ -58,13 +60,19 @@ main {
 
 .uitleg p:not(:last-of-type, :nth-last-of-type(2)) { margin-bottom: 2.5vw;}
 
+.uitleg p:last-of-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 100%;
+}
+
 .uitleg p a {
     font-size: 1.2em;
     width: 100%;
     text-align: center;
     display: inline-block;
-    padding: 10vw 0;
-    
+    padding: 5% 0;
 }
 
 .uitleg p.review {
@@ -80,7 +88,7 @@ main {
 }
 
 .informatie#websites article { justify-content: start;}
-.informatie#websites article .uitleg { display: block;}
+.informatie#websites article .uitleg { display: flex;}
 
 .uitleg figure {
     border: var(--border-style);
@@ -121,11 +129,24 @@ section#selectie div {
     color: var(--dark-pink);
 
     text-decoration: none;
-    transition: transform 0.5s ease-out;
-    transform: rotate(0deg);
 }
 
-section#selectie div.actief {
+section#selectie div span {
+    transition: transform 0.5s ease-out;
+    transform: rotate(0deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100%;
+    border: var(--border-style);
+
+    height: 1.4em;
+    aspect-ratio: 1/1;
+ 
+}
+
+section#selectie div.actief span {
     transition: transform 0.5s ease-out;
     transform: rotate(90deg)
 }
@@ -143,6 +164,7 @@ section#selectie div.actief {
     height: fit-content;
     margin-bottom: 2.5vw;
     border-bottom: 0.5px solid var(--kleur-browser);
+    font-size: 0.5em;
 }
 
 .window {
@@ -155,38 +177,87 @@ section#selectie div.actief {
     border: 0.5px solid var(--kleur-browser);
     border-top: 0;
     border-bottom: 0;
+
+}
+
+.window img { 
+    width: 100%;
+    object-fit: cover;
 }
 
 .noscroll .window { overflow: hidden;}
+.noscroll .window img { object-fit: fill; height: 100%;}
 
-img { width: 100%; object-fit: cover;}
 
 .bar { width: 100%; aspect-ratio: 22/1; display: flex; justify-content: space-between; align-items: center;}
 .bar { background-color: var(--kleur-browser-licht);  border: 0.5px solid var(--kleur-browser);}
 .window::-webkit-scrollbar-track { border-radius: 8px; background-color: var(--kleur-browser-licht);}
-.window::-webkit-scrollbar { width: 10px; background-color: var(--kleur-browser-licht);}
+.window::-webkit-scrollbar { width: 0.8em; background-color: var(--kleur-browser-licht);}
 .window::-webkit-scrollbar-thumb { border-radius: 8px; background-color: var(--kleur-browser);}
 
 .inputfield { border: 0.5px solid var(--kleur-browser);}
 .arrows { width: 6%; margin: 0 2% ; display: flex; justify-content: space-between; align-items: center;}
 .commandos { height: 100%; width: 10%; margin: 0 2.5%; display: flex; justify-content: space-between; align-items: center; }
 .inputfield { height: 70%; width: 75%; background-color: var(--background-white); vertical-align: middle; display: flex; align-items: center;}
-.inputfield p { padding-left: 4px; font-size: 8px; text-align: left;}
+.inputfield p { padding-left: 1%; font-size: 1em; text-align: left;}
 
 
 
 /*/ / DESKTOP / /*/
 @media screen and (min-width: 600px) {
-  
+  :root {
+    --height-commands: calc(1.5 * var(--height-nav));
+  }
+
 .pagewrapper {
     padding: 20px calc(100% / 3);
 }
 
+section#selectie div {
+    border-left: var(--border-style);
+    border-right: var(--border-style);
+}
+
+section#selectie div span {
+    font-size: 1.2em;
+    height: 1.2em;
+}
+
 .uitleg p { margin-bottom: 20px;}
 .browser { margin-bottom: 20px; }
-
+div#info {
+    font-size: 2em;
+}
 .uitleg figure {
     margin: 20px 0;
 }
 
+.browser:not(.informatie#websites article .browser) {
+    font-size: 1em;
+    position: absolute;
+    top: calc((var(--height-nav) + var(--height-titel) + 0.5 * (100svh - var(--height-nav) - var(--height-titel) - var(--height-commands)))) ;
+    left: 50%;
+    translate: -50% -50%;
+    width: calc(100% / 1.5);
+    
+    aspect-ratio: 11/6 !important;
+    max-width: 90vw;
+    max-height: calc(100svh - var(--height-nav) - var(--height-titel) - var(--height-commands)) !important;
 }
+
+.browser .arrows svg:not(.informatie#websites article .browser .arrows svg ) {
+    scale: 4;
+    width: 8%;
+}
+
+.browser .commandos:not(.informatie#websites article .browser .arrows svg ) {
+    scale: 2;
+    width: 5%;
+    margin: 0 5%;
+}
+
+}
+
+/* calc((var(--height-nav) + var(--height-titel) + 0.5 * (100svh - var(--height-nav) - var(--height-titel) - var(--height-commands))))  */
+
+/* calc(0% - (( 0.5 * (100svh - var(--height-nav) - var(--height-titel) - var(--height-commands))))) */
