@@ -6,24 +6,16 @@ let infoKnop = document.querySelector("#info");
 const root = document.querySelector(':root');
 let beschrijvingen = document.querySelectorAll('article .uitleg');
 let uitleg = false;
-let beelden = document.querySelectorAll('.uitleg figure');
+// let beelden = document.querySelectorAll('.uitleg figure');
 let statischeWebsites = document.querySelectorAll('.noscroll')
-let alleBeelden = Array.from(beelden).concat(Array.from(statischeWebsites));
+// let alleBeelden = Array.from(beelden).concat(Array.from(statischeWebsites));
 
 let volgordenummer = 0;
 
 updateWebite(volgordenummer)
 
 infoKnop.addEventListener('click', (e) => {
-    if (!uitleg) {
-        pagina.classList.add("informatie");
-        infoKnop.classList.add("actief");
-        uitleg = true;
-    } else {
-        pagina.classList.remove("informatie");
-        infoKnop.classList.remove("actief");
-        uitleg = false;
-    }
+    toonInfo();
 })
 
 
@@ -34,6 +26,29 @@ links.addEventListener('click', (e) => {
 rechts.addEventListener('click', (e) => {
     volgende()
 })
+
+document.addEventListener('keydown', (e) => {
+    console.log(e);
+    if (e.code == 'ArrowLeft') {
+        vorige();
+    } else if (e.code == 'ArrowRight') {
+        volgende()
+    } else if (e.code == 'Space') {
+        toonInfo(); 
+    }
+})
+
+function toonInfo() {
+    if (!uitleg) {
+        pagina.classList.add("informatie");
+        infoKnop.classList.add("actief");
+        uitleg = true;
+    } else {
+        pagina.classList.remove("informatie");
+        infoKnop.classList.remove("actief");
+        uitleg = false;
+    }
+}
 
 function vorige() {
 

@@ -151,7 +151,7 @@ main {
     }
 
     .pagewrapper {
-        padding: 0;
+padding: 0;
         display: grid;
         overflow: hidden;
         grid-template-columns: 1fr 1fr 1fr;

@@ -58,7 +58,7 @@ main {
     color: var(--kleur);
 }
 
-.uitleg p:not(:last-of-type, :nth-last-of-type(2)) { margin-bottom: 2.5vw;}
+.uitleg p:not(:last-of-type, :nth-last-of-type(2)) { margin-bottom: 0.5em;}
 
 .uitleg p:last-of-type {
     display: flex;
@@ -72,19 +72,19 @@ main {
     width: 100%;
     text-align: center;
     display: inline-block;
-    padding: 5% 0;
+    padding: 1em 0;
 }
 
 .uitleg p.review {
-    text-align: center;
+    text-align: left;
 }
 
 .uitleg p.review span:first-of-type {
-    font-weight: 500;
+    font-style: italic;
 }
 
 .uitleg p.review span:last-of-type {
-    font-style: italic;
+    margin-top: 0.5em;
 }
 
 .informatie#websites article { justify-content: start;}
@@ -92,7 +92,7 @@ main {
 
 .uitleg figure {
     border: var(--border-style);
-    margin: 5vw 0;
+    margin: 1em 0;
     overflow: hidden;
     /* touch-action: pinch-zoom; */
     line-height: 0;
@@ -132,8 +132,8 @@ section#selectie div {
 }
 
 section#selectie div span {
-    transition: transform 0.5s ease-out;
-    transform: rotate(0deg);
+    transition: transform 0.3s ease-out;
+    transform: rotate(90deg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -147,8 +147,8 @@ section#selectie div span {
 }
 
 section#selectie div.actief span {
-    transition: transform 0.5s ease-out;
-    transform: rotate(90deg)
+    transition: transform 0.3s ease-out;
+    transform: rotate(0deg)
 }
 
 
@@ -162,7 +162,7 @@ section#selectie div.actief span {
 .browser {
     width: 100%;
     height: fit-content;
-    margin-bottom: 2.5vw;
+    margin-bottom: 0.5em;
     border-bottom: 0.5px solid var(--kleur-browser);
     font-size: 0.5em;
 }
@@ -209,10 +209,6 @@ section#selectie div.actief span {
     --height-commands: calc(1.5 * var(--height-nav));
   }
 
-.pagewrapper {
-    padding: 20px calc(100% / 3);
-}
-
 section#selectie div {
     border-left: var(--border-style);
     border-right: var(--border-style);
@@ -223,13 +219,13 @@ section#selectie div span {
     height: 1.2em;
 }
 
-.uitleg p { margin-bottom: 20px;}
-.browser { margin-bottom: 20px; }
+.browser { margin-bottom: 2em; }
 div#info {
     font-size: 2em;
 }
-.uitleg figure {
-    margin: 20px 0;
+
+.pagewrapper {
+    padding: 1em calc(100% / 3) 0em calc(100% / 3);
 }
 
 .browser:not(.informatie#websites article .browser) {
@@ -239,6 +235,8 @@ div#info {
     left: 50%;
     translate: -50% -50%;
     width: calc(100% / 1.5);
+
+    margin-bottom: 0;
     
     aspect-ratio: 11/6 !important;
     max-width: 90vw;

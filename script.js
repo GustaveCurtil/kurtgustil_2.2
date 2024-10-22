@@ -7,9 +7,10 @@ header.addEventListener('click', (e) => {
 
 let kopieerKnop = document.querySelector(".contact button");
 
-
-kopieerKnop.addEventListener('click', () => {
-    console.log(kopieerKnop.id)
-    navigator.clipboard.writeText(kopieerKnop.id);
-    alert("Yihaa! Je hebt '" + kopieerKnop.id + "' gekopieerd")
-})
+if (kopieerKnop) {
+    kopieerKnop.addEventListener('click', () => {
+        console.log(kopieerKnop.id)
+        navigator.clipboard.writeText(kopieerKnop.id);
+        alert("Yihaa! Je hebt '" + kopieerKnop.id + "' gekopieerd")
+    })
+}
