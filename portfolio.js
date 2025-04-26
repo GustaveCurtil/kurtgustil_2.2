@@ -5,9 +5,10 @@ let rechts = document.querySelector("#selectie svg:last-child");
 let infoKnop = document.querySelector("#info");
 const root = document.querySelector(':root');
 let beschrijvingen = document.querySelectorAll('article .uitleg');
-let uitleg = false;
+let uitleg = true;
 // let beelden = document.querySelectorAll('.uitleg figure');
 let statischeWebsites = document.querySelectorAll('.noscroll')
+let beeldWebsite;
 // let alleBeelden = Array.from(beelden).concat(Array.from(statischeWebsites));
 
 let volgordenummer = 0;
@@ -107,6 +108,10 @@ function updateWebite(volgordenummer){
         
     })
     website.classList.add('actief');
+    beeldWebsite = document.querySelector('.actief .window');
+    if (beeldWebsite) {
+        beeldWebsite.addEventListener('click', toonInfo);
+    }
     pagina.scrollTop = 0;
 }
 

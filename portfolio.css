@@ -199,7 +199,7 @@ section#selectie div.actief span {
 .arrows { width: 6%; margin: 0 2% ; display: flex; justify-content: space-between; align-items: center;}
 .commandos { height: 100%; width: 10%; margin: 0 2.5%; display: flex; justify-content: space-between; align-items: center; }
 .inputfield { height: 70%; width: 75%; background-color: var(--background-white); vertical-align: middle; display: flex; align-items: center;}
-.inputfield p { padding-left: 1%; font-size: 1em; text-align: left;}
+.inputfield p { padding-left: 1%; font-size: 1em; text-align: left;     white-space: nowrap;}
 
 
 

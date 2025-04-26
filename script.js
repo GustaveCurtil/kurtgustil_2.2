@@ -1,7 +1,7 @@
 let header = document.querySelector("header");
 
 header.addEventListener('click', (e) => {
-    window.location = 'index.html';
+    window.location = '/';
 })
 
 
