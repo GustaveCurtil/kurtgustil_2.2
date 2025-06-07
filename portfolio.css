@@ -67,7 +67,7 @@ main {
     height: 100%;
 }
 
-.uitleg p a {
+.uitleg p a, .uitleg p span {
     font-size: 1.2em;
     width: 100%;
     text-align: center;
@@ -132,6 +132,9 @@ section#selectie div {
 }
 
 section#selectie div span {
+      -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
     transition: transform 0.3s ease-out;
     transform: rotate(90deg);
     display: flex;
