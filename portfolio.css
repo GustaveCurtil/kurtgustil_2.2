@@ -143,7 +143,7 @@ section#selectie div span {
 
     border-radius: 100%;
     border: var(--border-style);
-
+    font-weight: 200;
     height: 1.4em;
     aspect-ratio: 1/1;
  
