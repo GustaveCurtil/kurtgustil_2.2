@@ -7,7 +7,7 @@
 }
 
 main {
-    columns: 400px 3;
+    columns: 400px;
     column-gap: 2rem;
 }
 
