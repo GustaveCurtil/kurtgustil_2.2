@@ -1,15 +1,45 @@
 :root {
-    --light-pink: #382c23;
+    --dark-pink: rgb(54, 54, 54);
+    --light-pink: rgb(255, 255, 255);
+    --background-white: rgb(255, 255, 255);
+    --black: rgb(0, 0, 0);
+    --matching-color: rgb(0, 202, 34); 
 }
 
 main {
-    height: 100svh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: URL(experiment/achtergrond_speeltuin.png);
-    background-repeat: repeat;
-    background-size: contain;
+    columns: 400px;
+    column-gap: 2rem;
 }
 
+ul {
+    list-style: '★ ' inside;
+}
+section {
+    break-inside: avoid;
+    padding: 1rem;
+
+}
+
+img {
+    width: 100%;
+}
+
+audio {
+  width: 100%;
+  accent-color: var(--matching-color);
+  background-color: var(--light-pink); /* fallback background */
+  border: 1px solid black;
+  margin-top: 0.2rem;
+}
+
+/* Play button and panel in WebKit browsers */
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-panel {
+  background-color: var(--light-pink);
+  color: var(--matching-color);
+}
+
+/* Optional: style the timeline background (WebKit only) */
+audio::-webkit-media-controls-timeline {
+  background-color: var(--light-pink);
+}
