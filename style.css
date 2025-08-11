@@ -19,10 +19,47 @@ html {
     --height-nav: 3rem;
     --matching-color: rgb(56, 114, 150); 
     --border-style: 1px solid var(--dark-pink);
+    --cursor-arrow: url('/cursor/arrow.cur'), auto;
+    --cursor-handwriting: url('/cursor/handwriting.cur'), auto;
+    --cursor-help: url('/cursor/help.cur'), auto;
+    --cursor-precision: url('/cursor/precision.cur'), auto;
+    --cursor-text: url('/cursor/text.cur'), auto;
+    --cursor-unavailable: url('/cursor/unavailable.cur'), auto;
+    --cursor-working: url('/cursor/working.cur'), auto;
+    --cursor-move: url('/cursor/move.cur'), auto;
+    --cursor-link: url('/cursor/link.cur'), auto;
+    --cursor-alt: url('/cursor/alt.cur'), auto;
+    --cursor-busy: url('/cursor/busy.cur'), var(--cursor-working);
 }
+
+/* General arrow */
+body {
+  cursor: var(--cursor-arrow);
+}
+
+/* Links */
+a, button {
+  cursor: var(--cursor-link);
+}
+
+/* Text inputs */
+input[type="text"], textarea {
+  cursor: var(--cursor-text);
+}
+
+/* Disabled elements */
+[disabled] {
+  cursor: var(--cursor-unavailable);
+}
+
 
 a {
     color: var(--matching-color);
+     cursor: var(--cursor-link);
+}
+
+audio {
+     cursor: pointer;
 }
 
 body {
@@ -52,6 +89,7 @@ header {
 
     overflow: hidden;
     border-bottom: var(--border-style);
+    cursor: var(--cursor-alt);
 }
 
 header h1 {
@@ -74,7 +112,7 @@ header h1 {
 }
 
 header h1 span {font-style: italic;}
-
+::-webkit-scrollbar-thumb { cursor: var(--cursor-move);}
 nav {
     grid-area: nav;
     width: 100%;

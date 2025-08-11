@@ -27,19 +27,34 @@ audio {
 }
 
 audio:not(:last-of-type) {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
-/* Play button and panel in WebKit browsers */
-audio::-webkit-media-controls-play-button,
+/* Target play button in Safari & Chrome */
+audio::-webkit-media-controls-play-button {
+  background-color: var(--light-pink) !important;
+  border-radius: 50%; /* Safari respects this */
+}
+
+/* Target the control panel background */
 audio::-webkit-media-controls-panel {
-  background-color: var(--light-pink);
-  color: var(--matching-color);
+  background-color: var(--light-pink) !important;
 }
 
-/* Optional: style the timeline background (WebKit only) */
+/* Timeline bar background */
 audio::-webkit-media-controls-timeline {
-  background-color: var(--light-pink);
+  background-color: var(--light-pink) !important;
+}
+
+/* Timeline thumb in Safari */
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+  color: var(--matching-color) !important;
+}
+
+/* Progress bar fill (Safari only) */
+audio::-webkit-media-controls-progress-bar {
+  background-color: var(--matching-color) !important;
 }
 
 ::-webkit-scrollbar {

@@ -129,6 +129,7 @@ section#selectie div {
     color: var(--dark-pink);
 
     text-decoration: none;
+    cursor: var(--cursor-help);
 }
 
 section#selectie div span {
@@ -155,9 +156,10 @@ section#selectie div.actief span {
 }
 
 
-#selectie svg { width: calc(100% / 3);}
+#selectie svg { width: calc(100% / 3);     cursor: var(--cursor-link);}
 #selectie svg.einde {
     opacity: 0;
+    cursor: var(--cursor-arrow);
 }
 
 
@@ -225,6 +227,7 @@ section#selectie div span {
 .browser { margin-bottom: 2em; }
 div#info {
     font-size: 2em;
+    cursor: var( --cursor-help);
 }
 
 .pagewrapper {

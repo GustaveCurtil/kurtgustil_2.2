@@ -2,7 +2,7 @@
 
 *, html {padding: 0; margin: 0; box-sizing: border-box;}
 
-html { font-size: 17px;}
+html { font-size: 17px; cursor: url('/cursor/unavailable.cur'), auto}
 @media screen and (min-width: 600px) {html {font-size: 18px;} }
 
 :root {    
@@ -22,7 +22,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    background: url(fotos/mijn_bureau.png) 45% center no-repeat;
+    background: url(mijn_bureau.png) 45% center no-repeat;
     background-size: cover;
     background-color: #ffdbdb;
 }
@@ -60,6 +60,7 @@ a {
   text-shadow: var(--kleur) 0px 0px 5px, var(--kleur) 0px 0px 10px;
 
   animation: glow 2s ease-in-out infinite alternate;
+  cursor: url('/cursor/link.cur'), auto;
 }
   
 @keyframes glow {
