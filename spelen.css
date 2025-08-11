@@ -1,7 +1,5 @@
 
-main {
-    overflow-y: hidden;
-}
+
 
 main>div {
     columns: 400px 3;
@@ -42,4 +40,8 @@ audio::-webkit-media-controls-panel {
 /* Optional: style the timeline background (WebKit only) */
 audio::-webkit-media-controls-timeline {
   background-color: var(--light-pink);
+}
+
+::-webkit-scrollbar {
+  width: 0;
 }
