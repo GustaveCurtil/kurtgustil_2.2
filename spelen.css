@@ -1,14 +1,10 @@
-:root {
-    --dark-pink: rgb(54, 54, 54);
-    --light-pink: rgb(255, 255, 255);
-    --background-white: rgb(255, 255, 255);
-    --black: rgb(0, 0, 0);
-    --matching-color: rgb(0, 202, 34); 
-}
 
 main {
-    columns: 400px;
-    column-gap: 2rem;
+    overflow-y: hidden;
+}
+
+main>div {
+    columns: 400px 3;
 }
 
 ul {
@@ -30,6 +26,10 @@ audio {
   background-color: var(--light-pink); /* fallback background */
   border: 1px solid black;
   margin-top: 0.2rem;
+}
+
+audio:not(:last-of-type) {
+    margin-bottom: 1rem;
 }
 
 /* Play button and panel in WebKit browsers */
