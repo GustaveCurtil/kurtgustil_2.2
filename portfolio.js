@@ -10,10 +10,11 @@ let uitleg = true;
 let statischeWebsites = document.querySelectorAll('.noscroll')
 let beeldWebsite;
 // let alleBeelden = Array.from(beelden).concat(Array.from(statischeWebsites));
-
+console.log(websites)
 let volgordenummer = 0;
 
 updateWebite(volgordenummer)
+toonInfo()
 
 infoKnop.addEventListener('click', (e) => {
     toonInfo();
@@ -29,7 +30,6 @@ rechts.addEventListener('click', (e) => {
 })
 
 document.addEventListener('keydown', (e) => {
-    console.log(e);
     if (e.code == 'ArrowLeft') {
         vorige();
     } else if (e.code == 'ArrowRight') {
@@ -102,7 +102,7 @@ function updateWebite(volgordenummer){
 
     // root.style.setProperty('--kleur-browser', kleur);
     // root.style.setProperty('--kleur-browser-licht', kleurAchtergrond);
-
+    console.log(websites);
     websites.forEach(website => {
         website.classList.remove('actief');
         

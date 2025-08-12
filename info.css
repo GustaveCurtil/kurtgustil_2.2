@@ -26,6 +26,10 @@ article.intro {
     font-weight: 500;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
+
 li {
     list-style-position: outside;
     margin-left: 1.7em;
@@ -131,6 +135,6 @@ img {
     object-fit: cover;
 }
 
-@media screen and (min-width: 700px) {
-
+@media screen and (max-width: 1000px) {
+    .pagewrapper {max-width: 690px; margin: 0 auto;}
 }

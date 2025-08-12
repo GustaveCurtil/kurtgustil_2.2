@@ -209,7 +209,7 @@ section#selectie div.actief span {
 
 
 /*/ / DESKTOP / /*/
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1000px) {
   :root {
     --height-commands: calc(1.5 * var(--height-nav));
   }
