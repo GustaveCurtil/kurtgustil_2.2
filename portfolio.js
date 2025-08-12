@@ -15,11 +15,20 @@ let volgordenummer = 0;
 
 updateWebite(volgordenummer)
 toonInfo()
-
+infoKnop.addEventListener('mousedown', (e) => {
+    e.preventDefault(); // stops selection from even starting
+});
 infoKnop.addEventListener('click', (e) => {
     toonInfo();
 })
 
+links.addEventListener('mousedown', (e) => {
+    e.preventDefault(); // stops selection from even starting
+});
+
+rechts.addEventListener('mousedown', (e) => {
+    e.preventDefault();
+});
 
 links.addEventListener('click', (e) => {
     vorige();
