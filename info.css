@@ -106,9 +106,8 @@ a {
 #filter1 {
     position: absolute;
     width: 100%;
-    height: 100%;
     background-color: hsla(119, 76%, 33%, 0.2);
-        margin-bottom: 1rem;
+    aspect-ratio: 1/1;
 }
 
 #filter2 {
