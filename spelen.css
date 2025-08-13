@@ -17,7 +17,11 @@ section {
 img {
     width: 100%;
 }
-
+iframe {
+  width: 100%;
+      height: auto;
+    aspect-ratio: 85 / 64;
+}
 audio {
   width: 100%;
   accent-color: var(--matching-color);
