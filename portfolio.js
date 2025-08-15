@@ -38,6 +38,36 @@ rechts.addEventListener('click', (e) => {
     volgende()
 })
 
+// Add swipe detection
+const mainArea = document.querySelector('main .pagewrapper'); // replace with your actual main area selector
+
+let startX = 0;
+let endX = 0;
+
+mainArea.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+});
+
+mainArea.addEventListener('touchend', (e) => {
+    endX = e.changedTouches[0].clientX;
+    handleSwipe();
+});
+
+function handleSwipe() {
+    const swipeDistance = endX - startX;
+
+    // adjust threshold so small movements aren't counted
+    if (Math.abs(swipeDistance) > 50) {
+        if (swipeDistance > 0) {
+            // swipe right → go previous
+            vorige();
+        } else {
+            // swipe left → go next
+            volgende();
+        }
+    }
+}
+
 document.addEventListener('keydown', (e) => {
     if (e.code == 'ArrowLeft') {
         vorige();
