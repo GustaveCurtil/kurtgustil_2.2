@@ -41,6 +41,11 @@ rechts.addEventListener('click', (e) => {
 // Add swipe detection
 const mainArea = document.querySelector('main .pagewrapper'); // replace with your actual main area selector
 
+mainArea.addEventListener('click', (e) => {
+    if (!e.target.closest('a')) { // ignores if click happened inside an <a>
+        toonInfo();
+    }
+});
 let startX = 0;
 let endX = 0;
 
@@ -147,10 +152,7 @@ function updateWebite(volgordenummer){
         
     })
     website.classList.add('actief');
-    beeldWebsite = document.querySelector('.actief .window');
-    if (beeldWebsite) {
-        beeldWebsite.addEventListener('click', toonInfo);
-    }
+
     pagina.scrollTop = 0;
 }
 
