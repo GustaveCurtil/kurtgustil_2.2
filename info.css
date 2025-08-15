@@ -42,6 +42,8 @@ h3 {
     font-style: italic;
 }
 
+h3 span {font-weight: 300; }
+
 h3:not(:first-child) {
     margin-top: 1em;
 }
