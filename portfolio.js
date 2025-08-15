@@ -46,32 +46,40 @@ mainArea.addEventListener('click', (e) => {
         toonInfo();
     }
 });
+
 let startX = 0;
-let endX = 0;
+let startY = 0;
 
 mainArea.addEventListener('touchstart', (e) => {
     startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+});
+
+mainArea.addEventListener('touchmove', (e) => {
+    const deltaX = e.touches[0].clientX - startX;
+    const deltaY = e.touches[0].clientY - startY;
+
+    // prevent default only if horizontal swipe is stronger than vertical
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        e.preventDefault();
+    }
 });
 
 mainArea.addEventListener('touchend', (e) => {
-    endX = e.changedTouches[0].clientX;
-    handleSwipe();
-});
+    const endX = e.changedTouches[0].clientX;
+    const endY = e.changedTouches[0].clientY;
+    const deltaX = endX - startX;
+    const deltaY = endY - startY;
 
-function handleSwipe() {
-    const swipeDistance = endX - startX;
-
-    // adjust threshold so small movements aren't counted
-    if (Math.abs(swipeDistance) > 50) {
-        if (swipeDistance > 0) {
-            // swipe right → go previous
-            vorige();
+    // only trigger if horizontal swipe is bigger than vertical movement
+    if (Math.abs(deltaX) > 50 && Math.abs(deltaX) > Math.abs(deltaY)) {
+        if (deltaX > 0) {
+            vorige(); // swipe right → previous
         } else {
-            // swipe left → go next
-            volgende();
+            volgende(); // swipe left → next
         }
     }
-}
+});
 
 document.addEventListener('keydown', (e) => {
     if (e.code == 'ArrowLeft') {
