@@ -67,7 +67,7 @@ main {
     height: 100%;
 }
 
-.uitleg p a, .uitleg p span {
+.uitleg p:last-of-type a, .uitleg p:last-of-type span {
     font-size: 1.2em;
     width: 100%;
     text-align: center;
