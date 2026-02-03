@@ -137,24 +137,24 @@ section#selectie div span {
       -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
-    transition: transform 0.3s ease-out;
-    transform: rotate(90deg);
+    /* transition: transform 0.3s ease-out;
+    transform: rotate(90deg); */
     display: flex;
     justify-content: center;
     align-items: center;
 
     border-radius: 100%;
-    border: var(--border-style);
+    /* border: var(--border-style); */
     font-weight: 200;
     height: 1.4em;
     aspect-ratio: 1/1;
  
 }
 
-section#selectie div.actief span {
+/* section#selectie div.actief span {
     transition: transform 0.3s ease-out;
     transform: rotate(0deg)
-}
+} */
 
 
 #selectie svg { width: calc(100% / 3);     cursor: var(--cursor-link);}

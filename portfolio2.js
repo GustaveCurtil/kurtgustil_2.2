@@ -2,7 +2,9 @@ let pagina = document.querySelector('#websites');
 let websites = document.querySelectorAll('#websites article');
 let links = document.querySelector("#selectie svg:first-child");
 let rechts = document.querySelector("#selectie svg:last-child");
-let infoKnop = document.querySelector("#info");
+let paginanummer = document.querySelector("#info");
+let x = paginanummer.querySelector('span:first-of-type');
+let y = paginanummer.querySelector('span:last-of-type');
 const root = document.querySelector(':root');
 let beschrijvingen = document.querySelectorAll('article .uitleg');
 let uitleg = false;
@@ -12,15 +14,9 @@ let beeldWebsite;
 // let alleBeelden = Array.from(beelden).concat(Array.from(statischeWebsites));
 console.log(websites)
 let volgordenummer = 0;
-
+y.innerHTML = websites.length
 updateWebite(volgordenummer)
 toonInfo()
-infoKnop.addEventListener('mousedown', (e) => {
-    e.preventDefault(); // stops selection from even starting
-});
-infoKnop.addEventListener('click', (e) => {
-    toonInfo();
-})
 
 links.addEventListener('mousedown', (e) => {
     e.preventDefault(); // stops selection from even starting
@@ -41,11 +37,11 @@ rechts.addEventListener('click', (e) => {
 // Add swipe detection
 const mainArea = document.querySelector('main .pagewrapper'); // replace with your actual main area selector
 
-mainArea.addEventListener('click', (e) => {
-    if (!e.target.closest('a')) { // ignores if click happened inside an <a>
-        toonInfo();
-    }
-});
+// mainArea.addEventListener('click', (e) => {
+//     if (!e.target.closest('a')) { // ignores if click happened inside an <a>
+//         toonInfo();
+//     }
+// });
 
 let startX = 0;
 let startY = 0;
@@ -94,11 +90,11 @@ document.addEventListener('keydown', (e) => {
 function toonInfo() {
     if (!uitleg) {
         pagina.classList.add("informatie");
-        infoKnop.classList.add("actief");
+        paginanummer.classList.add("actief");
         uitleg = true;
     } else {
         pagina.classList.remove("informatie");
-        infoKnop.classList.remove("actief");
+        paginanummer.classList.remove("actief");
         uitleg = false;
     }
 }
@@ -147,6 +143,7 @@ function kleurtje(richting) {
 }
 
 function updateWebite(volgordenummer){
+    x.innerHTML = volgordenummer + 1
     let website = websites[volgordenummer];
     let hue = 69 + volgordenummer * (360 / websites.length);
     let kleur = "hsl(" + hue + ", 20%, 69%)";
