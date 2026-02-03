@@ -22,7 +22,7 @@ article.intro {
 }
 
 .voorbeeld {
-    color: var(--matching-color);
+    color: var(--dark-pink);
     font-weight: 500;
 }
 
@@ -63,7 +63,7 @@ p {
 }
 
 button {
-    background-color: var(--dark-pink);
+    background-color: var(--matching-color);
     border: 0;
     color: var(--background-white);
     padding: 0 2px;
@@ -89,7 +89,8 @@ button {
 }
 
 a {
-    color: var(--dark-pink);
+    color: var(--matching-color);
+    
 }
 
 .klein {

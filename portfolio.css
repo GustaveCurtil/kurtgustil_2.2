@@ -163,6 +163,10 @@ section#selectie div.actief span {
     cursor: var(--cursor-arrow);
 }
 
+svg {
+    color: var(--matching-color);
+}
+
 
 /* BROWSER */
 .browser {

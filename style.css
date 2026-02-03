@@ -15,7 +15,7 @@ html {
     --light-pink: rgb(255, 219, 219);
     --background-white: rgb(252, 252, 252);
     --black: rgb(54, 54, 54);
-    --height-titel: 2rem;
+    --height-titel: 4rem;
     --height-nav: 3rem;
     --matching-color: rgb(56, 114, 150); 
     --border-style: 1px solid var(--dark-pink);
@@ -55,7 +55,7 @@ input[type="text"], textarea {
 
 a {
     color: var(--matching-color);
-     cursor: var(--cursor-link);
+
 }
 
 audio {
@@ -90,6 +90,10 @@ header {
     overflow: hidden;
     border-bottom: var(--border-style);
     cursor: var(--cursor-alt);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 header h1 {
@@ -98,7 +102,7 @@ header h1 {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: 300;
     font-size: 1.5em;
-    line-height: var(--height-titel);
+    line-height: 2rem;
     
     display: inline-flex;
     align-items: center;
@@ -109,6 +113,13 @@ header h1 {
     transform: translateX(-50%);
     position: relative;
     left: 50%;
+}
+
+header h2 {
+    font-weight: 300;
+    font-size: 1rem;
+    text-align: center;
+    text-transform:uppercase;
 }
 
 header h1 span {font-style: italic;}
@@ -132,8 +143,7 @@ nav a {
 
     font-size: 1.2em;
 
-    color: var(--dark-pink);
-    
+    color: var(--matching-color);
     background-color: var(--light-pink);
 
     /* text-decoration: none; */
@@ -143,7 +153,7 @@ nav a {
 }
 
 nav a:last-of-type {border-right: 0;}
-nav a.actief { text-decoration: none; background-color: var(--background-white); font-style: italic;}
+nav a.actief { text-decoration: none; background-color: var(--background-white); font-style: italic; color: var(--dark-pink);}
 
 
 main {
@@ -166,10 +176,10 @@ main {
 @media screen and (min-width: 1000px) {
     :root {
         --height-nav: 35px;
-        --height-titel: 50px;
+        --height-titel: 4rem;
     }
     html {
-        font-size: 16px;
+        font-size: 18px;
     }
     body {
         grid-template-areas:  
