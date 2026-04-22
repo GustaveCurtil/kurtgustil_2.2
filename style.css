@@ -16,7 +16,7 @@ html {
     --background-white: rgb(252, 252, 252);
     --black: rgb(54, 54, 54);
     --height-titel: 4rem;
-    --height-nav: 3rem;
+    --height-nav: 2.8rem;
     --matching-color: rgb(56, 114, 150); 
     --border-style: 1px solid var(--dark-pink);
     --cursor-arrow: url('/cursor/arrow.cur'), auto;
@@ -71,8 +71,8 @@ body {
     grid-template-rows: auto auto auto;
     grid-template-areas:  
     "header"
-    "main"
-    "nav";
+    "nav"
+    "main";
 
     overflow: hidden;
 
@@ -148,7 +148,7 @@ nav a {
 
     /* text-decoration: none; */
 
-    border-top: var(--border-style);
+    border-bottom: var(--border-style);
     border-right: var(--border-style);
 }
 
@@ -175,7 +175,7 @@ main {
 
 @media screen and (min-width: 1000px) {
     :root {
-        --height-nav: 35px;
+        --height-nav: 3rem;
         --height-titel: 4rem;
     }
     html {
@@ -192,11 +192,11 @@ main {
         font-size: 2em;
     }
 
-    nav a {
+    /* nav a {
         border-top: 0px;
         border-bottom: var(--border-style);
 
-    }
+    } */
 
     .pagewrapper {
 padding: 0;

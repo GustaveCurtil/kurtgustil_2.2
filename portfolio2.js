@@ -134,7 +134,7 @@ function kleurtje(richting) {
     // let hue = Math.floor(Math.random() * 360) 
 
     richting.style.transition = "none";
-    richting.style.backgroundColor = "var(--light-pink)";
+    richting.style.backgroundColor = "var(--background-white)";
 
     setTimeout(function() {
         richting.style.transition = "background-color 1s ease";
