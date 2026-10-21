@@ -65,7 +65,21 @@ a {
   animation: glow 2s ease-in-out infinite alternate;
   cursor: url('/cursor/link.cur'), auto;
 }
-  
+#counter {
+  position: absolute;
+  bottom: 0;
+}
+p {
+  color: var(--licht);
+
+  padding: 5px;
+  margin-top: 20px;
+
+  text-shadow: var(--kleur) 0px 0px 5px, var(--kleur) 0px 0px 10px;
+
+  animation: glow 2s ease-in-out infinite alternate; 
+}
+
 @keyframes glow {
   from { text-shadow: 0 0 10px var(--licht), 0 0 20px var(--licht), 0 0 30px var(--kleur2), 0 0 40px var(--kleur2), 0 0 50px var(--kleur2), 0 0 60px var(--kleur2), 0 0 70px var(--kleur2);}
   to { text-shadow: 0 0 20px var(--licht), 0 0 30px var(--kleur2), 0 0 40px var(--kleur2), 0 0 50px var(--kleur2), 0 0 60px var(--kleur2), 0 0 70px var(--kleur2), 0 0 80px var(--kleur2);}
